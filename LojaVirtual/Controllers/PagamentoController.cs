@@ -92,7 +92,6 @@ namespace LojaVirtual.Controllers
                     Transaction transaction = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
                     Pedido pedido = ProcessarPedido(produtos, transaction);
 
-                    //TODO - Remover o estoque dos produtos.
                     return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
                 }
                 catch (PagarMeException e)
@@ -117,11 +116,10 @@ namespace LojaVirtual.Controllers
 
             try
             {
-                Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal);
+                Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal, produtos, enderecoEntrega, frete);
 
                 Pedido pedido = ProcessarPedido(produtos, transaction);
 
-                //TODO - Remover o estoque dos produtos.
                 return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
             }
             catch (PagarMeException e)
@@ -221,7 +219,7 @@ namespace LojaVirtual.Controllers
 
             foreach (var produto in produtos)
             {
-                total += produto.Valor;
+                total += produto.Valor * produto.QuantidadeProdutoCarrinho;
             }
 
             return total;
