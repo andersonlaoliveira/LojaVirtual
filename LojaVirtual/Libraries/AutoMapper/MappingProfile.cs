@@ -33,12 +33,12 @@ namespace LojaVirtual.Libraries.AutoMapper
                 .ForMember(dest => dest.TransactionId, opt => opt.MapFrom(orig => orig.Id))
                 .ForMember(dest => dest.FreteEmpresa, opt => opt.MapFrom(orig => "ECT - Correios"))
                 .ForMember(dest => dest.FormaPagamento, opt => opt.MapFrom(orig => (orig.PaymentMethod == 0) ? MetodoPagamentoConstant.CartaoCredito : MetodoPagamentoConstant.Boleto))
-                .ForMember(dest => dest.DadosTransaction, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig)))
+                .ForMember(dest => dest.DadosTransaction, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore })))
                 .ForMember(dest => dest.DataRegistro, opt => opt.MapFrom(orig => DateTime.Now))
                 .ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(orig => Mascara.ConverterPagarMeIntToDecimal(orig.Amount)));
 
             CreateMap<List<ProdutoItem>, Pedido>()
-                .ForMember(dest => dest.DadosProdutos, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>() })));
+                .ForMember(dest => dest.DadosProdutos, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>(), ReferenceLoopHandling = ReferenceLoopHandling.Ignore })));
 
             CreateMap<Pedido, PedidoSituacao>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(orig => 0))
@@ -46,7 +46,18 @@ namespace LojaVirtual.Libraries.AutoMapper
                 .ForMember(dest => dest.Data, opt => opt.MapFrom(orig => DateTime.Now));
 
             CreateMap<TransactionProduto, PedidoSituacao>()
-                .ForMember(dest => dest.Dados, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>() })));
+                .ForMember(dest => dest.Dados, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>(), ReferenceLoopHandling = ReferenceLoopHandling.Ignore })));
+
+            /*
+            CreateMap<DadosCancelamentoBoleto, BankAccount>()
+                .ForMember(dest => dest.BankCode, opt => opt.MapFrom(orig => orig.BancoCodigo))
+                .ForMember(dest => dest.Agencia, opt => opt.MapFrom(orig => orig.Agencia))
+                .ForMember(dest => dest.AgenciaDv, opt => opt.MapFrom(orig => orig.AgenciaDV))
+                .ForMember(dest => dest.Conta, opt => opt.MapFrom(orig => orig.Conta))
+                .ForMember(dest => dest.ContaDv, opt => opt.MapFrom(orig => orig.ContaDV))
+                .ForMember(dest => dest.LegalName, opt => opt.MapFrom(orig => orig.Nome))
+                .ForMember(dest => dest.DocumentNumber, opt => opt.MapFrom(orig => orig.CPF));
+                */
         }
     }
 }

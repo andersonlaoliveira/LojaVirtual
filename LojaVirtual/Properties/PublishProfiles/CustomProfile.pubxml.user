@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwLbjDtWeDEmaSuFT2SmFFwAAAAACAAAAAAAQZgAAAAEAACAAAAD3R1TpHG0Cv7oPzGafpbdqsb/g6LX3fHHhw7wOXIJ8pgAAAAAOgAAAAAIAACAAAABcPQgknY4vf+J5beFz5FayY9h6fTPQciYRGyM5hDRSkCAAAAATRBA/ZdW3Ryc05aqmYRRoLr7PGF5KEoHaI8i0CpnEJ0AAAADaXM65OK1hEUWTR/PG62Zls1ANbYPJ+M35s2A2Q2sJspZCNGznbZNSlafB/MQ4eJwpNsVt08GNkqG/aW4XIfoF</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp.traycloud.com.br/lojavirtual.traycloud.com.br</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>06/11/2020 09:39:41</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>05/25/2020 09:57:34</publishTime>
+    </File>
+    <File Include="appsettings.Production.json">
+      <publishTime>06/16/2020 10:11:43</publishTime>
+    </File>
+    <File Include="AutoMapper.dll">
+      <publishTime>04/25/2019 21:00:34</publishTime>
+    </File>
+    <File Include="AutoMapper.Extensions.Microsoft.DependencyInjection.dll">
+      <publishTime>04/29/2019 20:31:02</publishTime>
+    </File>
+    <File Include="Connected Services/WSCorreios/ConnectedService.json">
+      <publishTime>06/02/2020 10:55:30</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>09/24/2019 19:58:14</publishTime>
+    </File>
+    <File Include="LojaVirtual.deps.json">
+      <publishTime>06/16/2020 19:51:22</publishTime>
+    </File>
+    <File Include="LojaVirtual.dll">
+      <publishTime>06/16/2020 19:51:15</publishTime>
+    </File>
+    <File Include="LojaVirtual.pdb">
+      <publishTime>06/16/2020 19:51:15</publishTime>
+    </File>
+    <File Include="LojaVirtual.runtimeconfig.json">
+      <publishTime>06/16/2020 10:11:43</publishTime>
+    </File>
+    <File Include="LojaVirtual.Views.dll">
+      <publishTime>06/16/2020 19:51:16</publishTime>
+    </File>
+    <File Include="LojaVirtual.Views.pdb">
+      <publishTime>06/16/2020 19:51:16</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Core.dll">
+      <publishTime>04/19/2019 23:24:44</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>04/30/2018 16:29:02</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>04/30/2018 16:29:04</publishTime>
+    </File>
+    <File Include="Microsoft.DotNet.PlatformAbstractions.dll">
+      <publishTime>05/15/2018 21:01:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyModel.dll">
+      <publishTime>05/15/2018 21:01:34</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>09/24/2019 19:57:40</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>09/24/2019 19:57:46</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>09/24/2019 19:57:50</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>09/24/2019 19:57:48</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>09/24/2019 19:57:42</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>09/24/2019 19:57:42</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>09/24/2019 19:57:52</publishTime>
+    </File>
+    <File Include="MySqlConnector.dll">
+      <publishTime>01/16/2019 15:11:42</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>11/09/2019 00:56:44</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>04/24/2018 21:27:10</publishTime>
+    </File>
+    <File Include="PagarMeCore.dll">
+      <publishTime>06/10/2020 13:10:55</publishTime>
+    </File>
+    <File Include="PagarMeCore.pdb">
+      <publishTime>06/10/2020 13:10:55</publishTime>
+    </File>
+    <File Include="Pomelo.EntityFrameworkCore.MySql.dll">
+      <publishTime>02/07/2019 23:10:26</publishTime>
+    </File>
+    <File Include="Pomelo.JsonObject.dll">
+      <publishTime>02/07/2019 22:47:50</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netstandard2.0/System.Private.ServiceModel.dll">
+      <publishTime>07/19/2018 18:24:10</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Net.Http.WinHttpHandler.dll">
+      <publishTime>07/19/2017 10:01:30</publishTime>
+    </File>
+    <File Include="runtimes/win7/lib/netstandard2.0/System.Private.ServiceModel.dll">
+      <publishTime>07/19/2018 18:24:12</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>11/05/2016 04:55:42</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>11/05/2016 04:55:44</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>11/05/2016 04:55:46</publishTime>
+    </File>
+    <File Include="System.Net.Http.WinHttpHandler.dll">
+      <publishTime>07/19/2017 10:01:30</publishTime>
+    </File>
+    <File Include="System.ServiceModel.dll">
+      <publishTime>07/19/2018 18:24:20</publishTime>
+    </File>
+    <File Include="System.ServiceModel.Duplex.dll">
+      <publishTime>07/19/2018 18:24:16</publishTime>
+    </File>
+    <File Include="System.ServiceModel.Http.dll">
+      <publishTime>07/19/2018 18:24:18</publishTime>
+    </File>
+    <File Include="System.ServiceModel.NetTcp.dll">
+      <publishTime>07/19/2018 18:24:18</publishTime>
+    </File>
+    <File Include="System.ServiceModel.Primitives.dll">
+      <publishTime>07/19/2018 18:24:20</publishTime>
+    </File>
+    <File Include="System.ServiceModel.Security.dll">
+      <publishTime>07/19/2018 18:24:20</publishTime>
+    </File>
+    <File Include="System.Text.Encodings.Web.dll">
+      <publishTime>11/15/2019 08:37:52</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>06/16/2020 19:51:22</publishTime>
+    </File>
+    <File Include="wwwroot/css/StyleSheet.css">
+      <publishTime>06/04/2020 12:11:29</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>05/12/2020 10:30:17</publishTime>
+    </File>
+    <File Include="wwwroot/img/Error403.png">
+      <publishTime>06/16/2020 19:47:32</publishTime>
+    </File>
+    <File Include="wwwroot/img/Error404.jpg">
+      <publishTime>06/16/2020 19:47:41</publishTime>
+    </File>
+    <File Include="wwwroot/img/Error500.png">
+      <publishTime>06/16/2020 19:47:50</publishTime>
+    </File>
+    <File Include="wwwroot/img/Error503.jpg">
+      <publishTime>06/16/2020 19:48:02</publishTime>
+    </File>
+    <File Include="wwwroot/img/ErrorGenerico.png">
+      <publishTime>06/16/2020 19:48:13</publishTime>
+    </File>
+    <File Include="wwwroot/img/imagem-padrao.png">
+      <publishTime>05/21/2020 13:22:28</publishTime>
+    </File>
+    <File Include="wwwroot/img/imagem-produto.png">
+      <publishTime>05/25/2020 09:16:13</publishTime>
+    </File>
+    <File Include="wwwroot/img/loading.gif">
+      <publishTime>06/03/2020 14:07:39</publishTime>
+    </File>
+    <File Include="wwwroot/js/Actions.js">
+      <publishTime>05/25/2020 09:47:08</publishTime>
+    </File>
+    <File Include="wwwroot/js/ActionsVisitante.js">
+      <publishTime>06/09/2020 13:45:44</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/cadastro.html">
+      <publishTime>01/26/2019 08:57:02</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/carrinho.html">
+      <publishTime>01/26/2019 08:31:34</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/cartao.html">
+      <publishTime>01/26/2019 08:31:42</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/contato.html">
+      <publishTime>01/26/2019 08:56:20</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/detalhe.html">
+      <publishTime>01/26/2019 08:31:26</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/finalizado.html">
+      <publishTime>01/26/2019 08:31:50</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/index.html">
+      <publishTime>01/26/2019 08:31:02</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/login.html">
+      <publishTime>01/26/2019 08:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/paginas/painel_cliente.html">
+      <publishTime>01/26/2019 09:14:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-grid.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-grid.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-grid.min.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-grid.min.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-reboot.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-reboot.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-reboot.min.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/css/bootstrap.min.css.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.js">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.js.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.js">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.js.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.min.js">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.min.js.map">
+      <publishTime>12/21/2018 16:47:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/.DS_Store">
+      <publishTime>11/16/2018 12:54:24</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/.DS_Store">
+      <publishTime>11/12/2018 07:51:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/bootstrap.css">
+      <publishTime>11/16/2018 12:31:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/bootstrap.css.map">
+      <publishTime>11/16/2018 12:31:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/responsive.css">
+      <publishTime>11/16/2018 12:31:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/responsive.css.map">
+      <publishTime>11/16/2018 12:31:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/ui.css">
+      <publishTime>11/16/2018 12:31:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/css/ui.css.map">
+      <publishTime>11/16/2018 12:31:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/index.html">
+      <publishTime>11/16/2018 13:03:54</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/js/bootstrap.bundle.min.js">
+      <publishTime>04/03/2018 10:44:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/js/jquery-2.0.0.min.js">
+      <publishTime>05/05/2013 09:51:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/js/script.js">
+      <publishTime>08/31/2018 11:04:52</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/.DS_Store">
+      <publishTime>11/16/2018 04:59:52</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/bootstrap-ecommerce-uikit.sketch">
+      <publishTime>11/16/2018 12:59:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/.DS_Store">
+      <publishTime>08/31/2018 11:42:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/.DS_Store">
+      <publishTime>07/16/2018 03:08:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/android.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/apple.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/bag.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/ball.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/bar.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/book.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/building.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/bus.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/car.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/car_repair.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/cpu.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/desktop_windows.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/diamond.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/fix.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/homeitem.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/hotel.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/ic_camera_alt.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/med.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/money.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/more.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/motorbike.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/museum.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/pants.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/plane.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/playstore.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/restaurant.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/restaurant2.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/scissor.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shipping.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shirt.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shopping copy 2.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shopping copy 3.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shopping copy.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/shopping.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/smartwatch.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/spa.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/sport.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/toy.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/university.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/watch.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/wifi.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/32x32-transparent/windows.png">
+      <publishTime>07/16/2018 02:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/.DS_Store">
+      <publishTime>07/16/2018 02:29:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/android.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/apple.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/bag.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/ball.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/bar.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/book.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/building.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/bus.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/car.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/car_repair.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/cpu.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/desktop_windows.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/diamond.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/fix.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/homeitem.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/hotel.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/ic_camera_alt.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/med.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/money.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/more.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/motorbike.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/museum.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/pants.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/plane.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/playstore.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/restaurant.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/restaurant2.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/scissor.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shipping.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shirt.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shopping copy 2.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shopping copy 3.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shopping copy.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/shopping.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/smartwatch.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/spa.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/sport.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/toy.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/university.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/watch.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/wifi.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-transparent/windows.png">
+      <publishTime>07/16/2018 02:27:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/.DS_Store">
+      <publishTime>07/16/2018 02:31:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/android.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/apple.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/bag.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/ball.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/bar.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/book.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/building.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/bus.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/car.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/car_repair.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/cpu.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/desktop_windows.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/diamond.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/fix.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/homeitem.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/hotel.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/ic_camera_alt.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/med.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/money.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/more.png">
+      <publishTime>07/16/2018 02:26:24</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/motorbike.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/museum.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/pants.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/plane.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/playstore.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/restaurant.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/restaurant2.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/scissor.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shipping.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shirt.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shopping copy 2.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shopping copy 3.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shopping copy.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/shopping.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/smartwatch.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/spa.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/sport.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/toy.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/university.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/watch.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/wifi.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/64x64-white/windows.png">
+      <publishTime>07/16/2018 02:26:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/icons-all.png">
+      <publishTime>07/16/2018 02:35:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/.DS_Store">
+      <publishTime>07/16/2018 02:29:08</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/android.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/apple.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/bag.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/ball.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/bar.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/book.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/building.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/bus.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/car.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/car_repair.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/cpu.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/desktop_windows.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/diamond.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/fix.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/homeitem.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/hotel.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/ic_camera_alt.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/med.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/money.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/more.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/motorbike.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/museum.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/pants.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/plane.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/playstore.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/restaurant.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/restaurant2.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/scissor.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shipping.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shirt.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shopping copy 2.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shopping copy 3.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shopping copy.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/shopping.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/smartwatch.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/spa.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/sport.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/toy.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/university.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/watch.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/wifi.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/icons/svg/windows.svg">
+      <publishTime>07/16/2018 02:27:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/index.html">
+      <publishTime>11/16/2018 02:10:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/.DS_Store">
+      <publishTime>11/16/2018 01:41:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/cards-grid.png">
+      <publishTime>11/15/2018 14:24:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/categories.png">
+      <publishTime>11/16/2018 03:14:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/forms.png">
+      <publishTime>11/16/2018 02:29:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/headers.png">
+      <publishTime>11/16/2018 12:19:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/items-aside.png">
+      <publishTime>11/16/2018 12:20:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/product-detail.png">
+      <publishTime>11/15/2018 14:25:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/product-listing.png">
+      <publishTime>11/15/2018 14:25:08</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/Showcase-sketch.jpg">
+      <publishTime>11/16/2018 04:11:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/Showcase.jpg">
+      <publishTime>11/16/2018 02:01:46</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/Showcase.psd">
+      <publishTime>11/16/2018 04:11:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/thumbnail-shoes-home.png">
+      <publishTime>11/16/2018 12:05:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-design/shots/thumbnail-shoes-page.png">
+      <publishTime>11/16/2018 12:05:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/example-sliders.html">
+      <publishTime>11/12/2018 07:53:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/.DS_Store">
+      <publishTime>11/12/2018 09:10:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-brands.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-brands.min.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-regular.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-regular.min.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-solid.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fa-solid.min.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fontawesome-all.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fontawesome-all.min.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fontawesome.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/css/fontawesome.min.css">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/fa-brands.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/fa-regular.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/fa-solid.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/fontawesome.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_animated.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_bordered-pulled.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_core.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_fixed-width.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_icons.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_larger.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_list.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_mixins.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_rotated-flipped.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_screen-reader.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_stacked.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/scss/_variables.scss">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-brands-400.eot">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-brands-400.svg">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-brands-400.ttf">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-brands-400.woff">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-brands-400.woff2">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-regular-400.eot">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-regular-400.svg">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-regular-400.ttf">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-regular-400.woff">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-regular-400.woff2">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-solid-900.eot">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-solid-900.svg">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-solid-900.ttf">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-solid-900.woff">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/fontawesome/webfonts/fa-solid-900.woff2">
+      <publishTime>03/01/2018 12:30:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/material-icons/material-icons.css">
+      <publishTime>12/19/2017 13:24:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/material-icons/MaterialIcons-Regular.eot">
+      <publishTime>01/05/2017 16:46:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/material-icons/MaterialIcons-Regular.ttf">
+      <publishTime>01/05/2017 16:45:24</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/material-icons/MaterialIcons-Regular.woff">
+      <publishTime>01/05/2017 16:45:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/material-icons/MaterialIcons-Regular.woff2">
+      <publishTime>01/05/2017 16:45:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/font.css">
+      <publishTime>07/02/2016 14:47:00</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/Roboto-Bold.ttf">
+      <publishTime>01/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/Roboto-Light.ttf">
+      <publishTime>01/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/Roboto-Medium.ttf">
+      <publishTime>01/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/Roboto-Regular.ttf">
+      <publishTime>01/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/fonts/roboto/Roboto-Thin.ttf">
+      <publishTime>01/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/html-components.html">
+      <publishTime>05/26/2020 12:36:45</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/apple-touch-icon.png">
+      <publishTime>03/24/2018 10:04:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/avatars/avatar1.jpg">
+      <publishTime>10/06/2017 02:21:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/avatars/avatar2.jpg">
+      <publishTime>07/02/2016 15:11:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/avatars/avatar3.jpg">
+      <publishTime>07/02/2016 15:12:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/banner-request.jpg">
+      <publishTime>03/03/2018 12:50:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/bg-cpu.jpg">
+      <publishTime>10/20/2017 10:46:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/bg-pattern.svg">
+      <publishTime>11/09/2017 07:25:42</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/slide1.jpg">
+      <publishTime>05/03/2018 12:26:08</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/slide2.jpg">
+      <publishTime>05/03/2018 12:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/banners/slide3.jpg">
+      <publishTime>05/03/2018 12:40:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/brand.png">
+      <publishTime>03/24/2018 13:02:36</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/favicon-32x32.png">
+      <publishTime>03/24/2018 10:04:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/favicon.ico">
+      <publishTime>03/24/2018 10:04:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/flag-in.png">
+      <publishTime>12/24/2017 13:09:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/flag-kr.png">
+      <publishTime>12/24/2017 13:09:38</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/flag-tr.png">
+      <publishTime>12/24/2017 13:09:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/flag-usa.png">
+      <publishTime>12/24/2017 13:09:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/flag-vt.png">
+      <publishTime>12/24/2017 13:09:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/pay-american-ex.png">
+      <publishTime>06/11/2017 02:14:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/pay-bank.png">
+      <publishTime>06/11/2017 02:14:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/pay-mastercard.png">
+      <publishTime>06/11/2017 02:14:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/pay-visa-el.png">
+      <publishTime>06/11/2017 02:14:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/pay-visa.png">
+      <publishTime>06/11/2017 02:14:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/rating-2.png">
+      <publishTime>12/26/2017 13:29:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/rating-3.png">
+      <publishTime>12/26/2017 13:29:26</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/rating-4.png">
+      <publishTime>12/26/2017 13:29:34</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/icons/rating-5.png">
+      <publishTime>12/26/2017 13:29:42</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/1.jpg">
+      <publishTime>02/09/2018 03:13:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/2.jpg">
+      <publishTime>08/30/2016 17:57:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/3.jpg">
+      <publishTime>02/09/2018 03:01:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/4.jpg">
+      <publishTime>02/09/2018 03:16:42</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/5.jpg">
+      <publishTime>12/22/2017 05:58:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/6.jpg">
+      <publishTime>08/30/2016 18:10:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/7.jpg">
+      <publishTime>02/18/2018 23:07:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/comp.png">
+      <publishTime>05/01/2018 09:08:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/item-sm.jpg">
+      <publishTime>02/09/2018 03:00:38</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/items/item-sm.png">
+      <publishTime>12/21/2017 14:35:32</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logo-dark.png">
+      <publishTime>06/19/2018 02:08:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logo-white.png">
+      <publishTime>06/19/2018 02:08:42</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logo.png">
+      <publishTime>06/22/2018 12:24:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo-alibaba.png">
+      <publishTime>05/24/2018 13:14:52</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo1.png">
+      <publishTime>03/05/2017 11:30:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo2.png">
+      <publishTime>03/05/2017 11:30:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo3.png">
+      <publishTime>03/05/2017 11:31:26</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo4.png">
+      <publishTime>03/05/2017 11:32:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/logos/logo5.png">
+      <publishTime>03/05/2017 11:32:54</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/1.jpg">
+      <publishTime>03/06/2017 02:42:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/2.jpg">
+      <publishTime>03/06/2017 02:41:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/3.jpg">
+      <publishTime>03/01/2017 19:53:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/4.jpg">
+      <publishTime>02/18/2018 12:37:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/5.jpg">
+      <publishTime>07/02/2016 15:14:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/posts/6.jpg">
+      <publishTime>03/06/2017 06:05:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/images/Thumbs.db">
+      <publishTime>09/21/2014 06:41:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/index.html">
+      <publishTime>11/12/2018 07:52:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/fancybox/fancybox.min.css">
+      <publishTime>06/08/2017 15:49:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/fancybox/fancybox.min.js">
+      <publishTime>06/08/2017 15:49:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/fancybox/index.html">
+      <publishTime>06/08/2017 15:49:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/ajax-loader.gif">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.carousel.css">
+      <publishTime>06/27/2018 11:33:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.carousel.min.css">
+      <publishTime>06/27/2018 11:33:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.theme.default.css">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.theme.default.min.css">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.theme.green.css">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.theme.green.min.css">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/assets/owl.video.play.png">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/owl.carousel.js">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/owlcarousel/owl.carousel.min.js">
+      <publishTime>04/19/2018 21:22:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/prism/prism.css">
+      <publishTime>02/28/2018 12:58:10</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/prism/prism.js">
+      <publishTime>02/23/2018 16:58:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/ajax-loader.gif">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/fonts/slick.eot">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/fonts/slick.svg">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/fonts/slick.ttf">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/fonts/slick.woff">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/slick-theme.css">
+      <publishTime>02/07/2018 13:52:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/slick.css">
+      <publishTime>05/01/2018 12:29:58</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/slick.js">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/plugins/slickslider/slick.min.js">
+      <publishTime>09/11/2017 19:08:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/.DS_Store">
+      <publishTime>11/12/2018 09:10:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_alert.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_background-variant.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_badge.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_border-radius.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_box-shadow.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_breakpoints.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_buttons.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_caret.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_clearfix.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_float.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_forms.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_gradients.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_grid-framework.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_grid.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_hover.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_image.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_list-group.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_lists.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_nav-divider.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_pagination.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_reset-text.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_resize.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_screen-reader.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_size.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_table-row.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_text-emphasis.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_text-hide.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_text-truncate.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_transition.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/mixins/_visibility.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_align.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_background.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_borders.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_clearfix.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_display.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_embed.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_flex.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_float.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_position.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_screenreaders.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_shadows.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_sizing.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_spacing.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_text.scss">
+      <publishTime>11/12/2018 08:46:40</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/utilities/_visibility.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_alert.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_badge.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_bootstrap.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_breadcrumb.scss">
+      <publishTime>08/31/2018 11:34:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_button-group.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_buttons.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_card.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_carousel.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_close.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_code.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_custom-forms.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_dropdown.scss">
+      <publishTime>04/11/2018 12:21:26</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_forms.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_functions.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_grid.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_images.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_input-group.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_jumbotron.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_list-group.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_media.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_mixins.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_modal.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_nav.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_navbar.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_pagination.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_popover.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_print.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_progress.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_reboot.scss">
+      <publishTime>04/10/2018 23:33:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_root.scss">
+      <publishTime>08/31/2018 09:56:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_tables.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_tooltip.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_transitions.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_type.scss">
+      <publishTime>08/31/2018 10:55:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_utilities.scss">
+      <publishTime>04/09/2018 00:00:22</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap-assets/_variables.scss">
+      <publishTime>05/05/2018 08:37:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/bootstrap.scss">
+      <publishTime>11/12/2018 08:57:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/responsive.scss">
+      <publishTime>11/12/2018 08:58:08</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_buttons.scss">
+      <publishTime>02/17/2018 14:37:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_cards-product.scss">
+      <publishTime>08/31/2018 09:55:32</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_elements.scss">
+      <publishTime>08/31/2018 10:12:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_items.scss">
+      <publishTime>08/31/2018 09:51:36</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_lists.scss">
+      <publishTime>11/12/2018 07:57:34</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_menu.scss">
+      <publishTime>07/20/2018 06:02:52</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/components/_plugin-styles.scss">
+      <publishTime>06/27/2018 11:33:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/.DS_Store">
+      <publishTime>11/12/2018 07:44:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/_bg.scss">
+      <publishTime>11/12/2018 07:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/_grid-24.scss">
+      <publishTime>04/11/2018 13:58:48</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/_helper-classes.scss">
+      <publishTime>08/31/2018 11:22:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/_mixins.scss">
+      <publishTime>11/12/2018 07:47:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/helpers/_typography.scss">
+      <publishTime>05/24/2018 13:03:06</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/pages/_page-common.scss">
+      <publishTime>03/14/2018 11:34:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/pages/_page-detail.scss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/pages/_page-home.scss">
+      <publishTime>02/23/2018 12:34:26</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/sections/_footer.scss">
+      <publishTime>04/13/2018 02:53:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/sections/_header.scss">
+      <publishTime>06/22/2018 11:43:52</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/sections/_sidebar.scss">
+      <publishTime>03/02/2018 07:59:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui-assets/_base.scss">
+      <publishTime>05/27/2018 12:04:32</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/ui.scss">
+      <publishTime>11/12/2018 08:57:16</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/sass/_variables-custom.scss">
+      <publishTime>11/16/2018 12:31:46</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-alibaba-home.html">
+      <publishTime>11/12/2018 07:58:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-alibaba-listing-grid.html">
+      <publishTime>11/12/2018 09:00:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-alibaba-product-detail.html">
+      <publishTime>11/12/2018 09:00:38</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-1.html">
+      <publishTime>11/12/2018 09:00:32</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-2.html">
+      <publishTime>11/12/2018 09:00:24</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-3.html">
+      <publishTime>11/12/2018 09:00:12</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-4.html">
+      <publishTime>11/12/2018 09:00:02</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-5.html">
+      <publishTime>11/12/2018 08:59:56</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-home-6.html">
+      <publishTime>11/12/2018 08:59:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-landing.html">
+      <publishTime>11/12/2018 08:59:44</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-page-content.html">
+      <publishTime>11/12/2018 08:59:36</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-page-listing.html">
+      <publishTime>11/12/2018 08:59:30</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/ui-ecommerce/starter-page-order.html">
+      <publishTime>11/12/2018 08:59:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/_bootstrap-ecommerce.com.url">
+      <publishTime>03/15/2018 12:52:38</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/bootstrap-ecommerce-uikit/_readme.txt">
+      <publishTime>03/16/2018 01:34:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/caroussel/carousel.css">
+      <publishTime>01/25/2019 10:07:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/charts/charts.js">
+      <publishTime>01/26/2019 09:12:50</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/dashboard/dashboard.css">
+      <publishTime>01/26/2019 09:09:18</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/dashboard/dashboard.js">
+      <publishTime>01/26/2019 09:12:28</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/feather/feather.js">
+      <publishTime>01/26/2019 09:11:26</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/holder/holder.min.js">
+      <publishTime>01/25/2019 10:06:20</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/jquery.cookie/jquery.cookie.1.4.1.js">
+      <publishTime>06/03/2020 13:10:57</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/jquery3.3.1/jquery-3.3.1.min.js">
+      <publishTime>01/25/2019 09:55:14</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/mask/jquery.mask.min.js">
+      <publishTime>03/24/2020 11:30:47</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/pagedlist/PagedList.css">
+      <publishTime>05/19/2020 14:40:51</publishTime>
+    </File>
+    <File Include="wwwroot/resources/lib/popper1.14.6/popper.min.js">
+      <publishTime>01/25/2019 09:56:08</publishTime>
+    </File>
+    <File Include="wwwroot/uploads/1004/Mouse-Gammer.jpg">
+      <publishTime>05/25/2020 09:28:53</publishTime>
+    </File>
+    <File Include="wwwroot/uploads/5004/Teclado-Top.jpg">
+      <publishTime>05/25/2020 09:23:01</publishTime>
+    </File>
+    <File Include="wwwroot/uploads/5004/Teclado-Top2.jpg">
+      <publishTime>05/25/2020 09:23:04</publishTime>
+    </File>
+    <File Include="wwwroot/uploads/5004/Teclado-Top3.jpg">
+      <publishTime>05/25/2020 09:23:07</publishTime>
+    </File>
+    <File Include="X.PagedList.dll">
+      <publishTime>04/16/2020 07:27:16</publishTime>
+    </File>
+    <File Include="X.PagedList.Mvc.Core.dll">
+      <publishTime>04/16/2020 07:27:18</publishTime>
+    </File>
+    <File Include="X.PagedList.Web.Common.dll">
+      <publishTime>04/16/2020 07:27:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

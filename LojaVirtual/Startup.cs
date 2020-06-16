@@ -116,8 +116,18 @@ namespace LojaVirtual
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "O campo deve ser preenchido!");
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            /* USO DO SQL SERVER LOCAL
             string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LojaVirtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));*/
+
+            /* USO DO SQL SERVER HOSPEDAGEM*/
+            string connectionHost = "Server=apolo.hostsrv.org;Database=trayclou_;User Id=lojavirtual;Password=l0j@v!rtu@l2020;";
+            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connectionHost));
+
+
+            /* USO DO MYSQL
+            string connectionMysql = "Server=apolo.hostsrv.org;Database=LojaVirtual;Uid=lojavirtual;Pwd=l0j@v!rtu@l2020;";
+            services.AddDbContext<LojaVirtualContext>(options => options.UseMySql(connectionMysql)); */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -126,9 +136,29 @@ namespace LojaVirtual
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+                app.UseExceptionHandler("/Error/Error500");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
             }
             else
             {
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+            if (env.IsProduction())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+                app.UseExceptionHandler("/Error/Error500");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+            else
+            {
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();

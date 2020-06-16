@@ -38,8 +38,18 @@ using LojaVirtual.Models.ViewModel;
 
 #line default
 #line hidden
+#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.ViewModel.Components;
+
+#line default
+#line hidden
+#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.ProdutoAgregador;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d330d2edccca04b374fc2fddfe65dd49cdc020c", @"/Views/CarrinhoCompra/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8ff17eb3fda0722456c40feec5aba28156a62f06", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1f88e4652f86249a5440b00fb7091149c26c0de", @"/Views/_ViewImports.cshtml")]
     public class Views_CarrinhoCompra_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<LojaVirtual.Models.ProdutoAgregador.ProdutoItem>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/img/imagem-produto.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -158,7 +168,7 @@ WriteAttributeValue("", 1618, item.Imagens.First().Caminho, 1618, 29, false);
             WriteLiteral("                                                    ");
             EndContext();
             BeginContext(1888, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "2d330d2edccca04b374fc2fddfe65dd49cdc020c11317", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "2d330d2edccca04b374fc2fddfe65dd49cdc020c11681", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -295,7 +305,7 @@ WriteAttributeValue("", 3663, item.QuantidadeProdutoCarrinho, 3663, 31, false);
             WriteLiteral(" cada)</small>\r\n                                        </div>\r\n                                    </td>\r\n                                    <td class=\"text-right\">\r\n                                        ");
             EndContext();
             BeginContext(4885, 128, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c19227", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c19591", async() => {
                 BeginContext(5000, 9, true);
                 WriteLiteral(" × Remove");
                 EndContext();
@@ -416,7 +426,7 @@ WriteAttributeValue("", 3663, item.QuantidadeProdutoCarrinho, 3663, 31, false);
             WriteLiteral("                            ");
             EndContext();
             BeginContext(7641, 213, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c25535", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c25899", async() => {
                 BeginContext(7841, 9, true);
                 WriteLiteral("Continuar");
                 EndContext();
@@ -466,7 +476,7 @@ WriteAttributeValue("", 3663, item.QuantidadeProdutoCarrinho, 3663, 31, false);
             WriteLiteral("                            ");
             EndContext();
             BeginContext(7968, 124, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c28887", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c29251", async() => {
                 BeginContext(8079, 9, true);
                 WriteLiteral("Continuar");
                 EndContext();
@@ -509,7 +519,7 @@ else
             WriteLiteral("    <div class=\"container\">\r\n        <br />\r\n        <br />\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n                Ainda não adicionou um produto ao seu carrinho? ");
             EndContext();
             BeginContext(8432, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c31416", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c31780", async() => {
                 BeginContext(8476, 11, true);
                 WriteLiteral("Clique aqui");
                 EndContext();
@@ -533,7 +543,7 @@ else
             WriteLiteral(" e começe a comprar\r\n            </div>\r\n            <br />\r\n            <br />\r\n            <div class=\"offset-md-4 col-md-4\">\r\n                ");
             EndContext();
             BeginContext(8636, 160, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c33159", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d330d2edccca04b374fc2fddfe65dd49cdc020c33523", async() => {
                 BeginContext(8736, 56, true);
                 WriteLiteral("\r\n                    Vamos as compras\r\n                ");
                 EndContext();

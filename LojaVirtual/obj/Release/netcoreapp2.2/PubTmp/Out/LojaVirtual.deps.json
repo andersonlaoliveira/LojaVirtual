@@ -33,12 +33,13 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "Newtonsoft.Json": "12.0.3",
-          "Pagar.me": "2.6.15",
+          "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
           "System.ServiceModel.Duplex": "4.4.4",
           "System.ServiceModel.Http": "4.4.4",
           "System.ServiceModel.NetTcp": "4.4.4",
           "System.ServiceModel.Security": "4.4.4",
-          "X.PagedList.Mvc.Core": "8.0.7"
+          "X.PagedList.Mvc.Core": "8.0.7",
+          "PagarMeCore": "1.0.0.0"
         },
         "runtime": {
           "LojaVirtual.dll": {}
@@ -75,17 +76,6 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        }
-      },
-      "BouncyCastle/1.7.0": {
-        "runtime": {
-          "lib/Net40-Client/BouncyCastle.Crypto.dll": {
-            "assemblyVersion": "1.7.4137.9688",
-            "fileVersion": "1.7.4137.9688"
-          }
-        },
-        "compile": {
-          "lib/Net40-Client/BouncyCastle.Crypto.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
@@ -310,6 +300,17 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
+      "MySqlConnector/0.49.2": {
+        "runtime": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {
+            "assemblyVersion": "0.49.2.0",
+            "fileVersion": "0.49.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -335,19 +336,35 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
-      "Pagar.me/2.6.15": {
+      "Pomelo.EntityFrameworkCore.MySql/2.2.0": {
         "dependencies": {
-          "BouncyCastle": "1.7.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "MySqlConnector": "0.49.2",
+          "Pomelo.JsonObject": "2.2.0"
         },
         "runtime": {
-          "lib/net45/PagarMe.dll": {
-            "assemblyVersion": "2.0.7251.31571",
-            "fileVersion": "2.0.7251.31571"
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
           }
         },
         "compile": {
-          "lib/net45/PagarMe.dll": {}
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/2.2.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -656,6 +673,17 @@
         },
         "compile": {
           "lib/netstandard2.0/X.PagedList.Web.Common.dll": {}
+        }
+      },
+      "PagarMeCore/1.0.0.0": {
+        "runtime": {
+          "PagarMeCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "PagarMeCore.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3810,13 +3838,6 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/6.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512"
     },
-    "BouncyCastle/1.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yvrW1NCFBC+l53Kchlk1iRYlnafpZ+o6oy0tFpFM2G28gz3H0PubyJFLc8KoYys3N0UPYo6TN2NRegpouDxRTw==",
-      "path": "bouncycastle/1.7.0",
-      "hashPath": "bouncycastle.1.7.0.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
       "type": "package",
       "serviceable": true,
@@ -3908,6 +3929,13 @@
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.4",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.4.nupkg.sha512"
     },
+    "MySqlConnector/0.49.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AMdiJ1anymn/MnvSKkaWfZXs49WUsdGi/5nlVGIOQ5QYhRZIfAFobht+Y7rK1UtEUzbqnjCKUBI6Zpp4zzRupQ==",
+      "path": "mysqlconnector/0.49.2",
+      "hashPath": "mysqlconnector.0.49.2.nupkg.sha512"
+    },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3922,12 +3950,19 @@
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
     },
-    "Pagar.me/2.6.15": {
+    "Pomelo.EntityFrameworkCore.MySql/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9DsvqNINVJ/TAnkcET6POzIKlmX18QBiFTZl02n7Vl58WVVtdkMSsivuL7FGaTkZ11egkOh1/DnFPYAce2nV5Q==",
-      "path": "pagar.me/2.6.15",
-      "hashPath": "pagar.me.2.6.15.nupkg.sha512"
+      "sha512": "sha512-OIIR2ASp8J5VyIf2i9cli8BjvD0kZl5zCwi4DBR/E/D0WVt+iZyKwGhCLt1V9+KiXQbYcYAujuKN3cMmwk5nZg==",
+      "path": "pomelo.entityframeworkcore.mysql/2.2.0",
+      "hashPath": "pomelo.entityframeworkcore.mysql.2.2.0.nupkg.sha512"
+    },
+    "Pomelo.JsonObject/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dfe8owsB+u9amQhZHKCPy2YiIt9tK4iX3dBoSwKlNd2cbi7Yh38XU93LjlYVJ+8HhxS9UgDoUbhYEt3jXTxBRQ==",
+      "path": "pomelo.jsonobject/2.2.0",
+      "hashPath": "pomelo.jsonobject.2.2.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",
@@ -4061,6 +4096,11 @@
       "sha512": "sha512-h03M+ZeaucubfLPlaKoFB/rxBxV17pddp3FVjwKO0QM47frt+QIIABHs2KB3Eay9Xc/sDPGvKkYsm0ZdUpF/lg==",
       "path": "x.pagedlist.web.common/8.0.7",
       "hashPath": "x.pagedlist.web.common.8.0.7.nupkg.sha512"
+    },
+    "PagarMeCore/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
