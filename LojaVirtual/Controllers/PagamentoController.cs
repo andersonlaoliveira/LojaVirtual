@@ -23,6 +23,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using PagarMe;
 using LojaVirtual.Libraries.AutoMapper;
+using LojaVirtual.Libraries.Email;
 
 namespace LojaVirtual.Controllers
 {
@@ -34,8 +35,10 @@ namespace LojaVirtual.Controllers
         private GerenciarPagarMe _gerenciarPagarMe;
         private IPedidoRepository _pedidoRepository;
         private IPedidoSituacaoRepository _pedidoSituacaRepository;
+        private GerenciarEmail _gerenciarEmail;
 
         public PagamentoController(
+            GerenciarEmail gerenciarEmail,
             IPedidoRepository pedidoRepository,
             IPedidoSituacaoRepository pedidoSituacaRepository,
             GerenciarPagarMe gerenciarPagarMe,
@@ -58,6 +61,7 @@ namespace LojaVirtual.Controllers
                   calcularPacote,
                   cookieValorPrazoFrete)
         {
+            _gerenciarEmail = gerenciarEmail;
             _pedidoRepository = pedidoRepository;
             _pedidoSituacaRepository = pedidoSituacaRepository;
             _cookie = cookie;
@@ -139,6 +143,10 @@ namespace LojaVirtual.Controllers
             SalvarPedidoSituacao(produtos, transacaoPagarMe, pedido);
 
             DarBaixaNoEstoque(produtos);
+
+            _cookieCarrinhoCompra.RemoverTodos();
+
+            _gerenciarEmail.EnviarDadosDoPedido(_loginCliente.GetCliente(), pedido);
 
             return pedido;
         }

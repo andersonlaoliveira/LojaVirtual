@@ -29,27 +29,32 @@ using X.PagedList;
 #line default
 #line hidden
 #line 6 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.Constants;
-
-#line default
-#line hidden
-#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel;
 
 #line default
 #line hidden
-#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel.Components;
 
 #line default
 #line hidden
-#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ProdutoAgregador;
 
 #line default
 #line hidden
+#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Contants;
+
+#line default
+#line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b42c4050b4889c283ab6761cc6bef400f21c676", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1f88e4652f86249a5440b00fb7091149c26c0de", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"db6c50a82ad95964959a9b5b95e8774fb6936668", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private global::AspNetCore.Views_Shared__Layout.__Generated__MenuViewComponentTagHelper __MenuViewComponentTagHelper;
@@ -89,7 +94,7 @@ using LojaVirtual.Models.ProdutoAgregador;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html lang=\"pt-br\">\r\n");
             EndContext();
             BeginContext(40, 1150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c6767658", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c6767830", async() => {
                 BeginContext(46, 100, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
                 EndContext();
@@ -114,7 +119,7 @@ using LojaVirtual.Models.ProdutoAgregador;
     ");
                 EndContext();
                 BeginContext(921, 53, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c6769304", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c6769476", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -133,7 +138,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(980, 72, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c67610636", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c67610808", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -152,7 +157,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(1058, 121, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c67611972", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b42c4050b4889c283ab6761cc6bef400f21c67612144", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -186,7 +191,7 @@ using LojaVirtual.Models.ProdutoAgregador;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1192, 1436, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67614109", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67614281", async() => {
                 BeginContext(1198, 16, true);
                 WriteLiteral("\r\n    <header>\r\n");
                 EndContext();
@@ -203,7 +208,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("        ");
                 EndContext();
                 BeginContext(1330, 19, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:menu", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67614876", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:menu", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67615048", async() => {
                 }
                 );
                 __MenuViewComponentTagHelper = CreateTagHelper<global::AspNetCore.Views_Shared__Layout.__Generated__MenuViewComponentTagHelper>();
@@ -249,7 +254,7 @@ using LojaVirtual.Models.ProdutoAgregador;
     ");
                 EndContext();
                 BeginContext(2147, 76, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67617508", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67617680", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -267,7 +272,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2229, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67618764", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67618936", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -285,7 +290,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("\r\n    <script src=\"/resources/lib/popper1.14.6/popper.min.js\"></script>\r\n    <script src=\"/resources/lib/bootstrap-4.2.1-dist/js/bootstrap.min.js\"></script>\r\n    ");
                 EndContext();
                 BeginContext(2454, 111, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67620187", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67620359", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -303,7 +308,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2571, 48, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67621443", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b42c4050b4889c283ab6761cc6bef400f21c67621615", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

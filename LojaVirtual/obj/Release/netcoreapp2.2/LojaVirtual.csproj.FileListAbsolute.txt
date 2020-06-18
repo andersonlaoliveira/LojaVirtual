@@ -73,3 +73,6 @@ C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Views\Error\Error404.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Views\Error\Error500.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Views\Error\Error503.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Atualizar.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\AtualizarSenha.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Index.cshtml.g.cs

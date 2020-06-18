@@ -7,12 +7,13 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace LojaVirtual.Libraries
+namespace LojaVirtual.Libraries.Email
 {
     public class GerenciarEmail
     {
         private SmtpClient _smtp;
         private IConfiguration _configuration;
+
         public GerenciarEmail(SmtpClient smtp, IConfiguration configuration)
         {
             _smtp = smtp;
@@ -21,14 +22,14 @@ namespace LojaVirtual.Libraries
 
         public void EnviarContatoPorEmail(Contato contato)
         {
-            string corpoMsg = string.Format("<H2>Contato - Loja Virtual</h2>" +
+            string corpoMsg = string.Format("<h2>Contato - LojaVirtual</h2>" +
                 "<b>Nome: </b> {0} <br />" +
                 "<b>E-mail: </b> {1} <br />" +
                 "<b>Texto: </b> {2} <br />" +
-                "<br /><br /> E-mail enviado automaticamente da LojaVirtual.<br />Plataforma desenvolvida por <a href='http://wwww.alcommerce.com.br'>ALCommerce</a>",
-            contato.Nome,
-            contato.Email,
-            contato.Texto
+                "<br /> E-mail enviado automaticamente do site LojaVirtual.",
+                contato.Nome,
+                contato.Email,
+                contato.Texto
             );
 
 
@@ -37,13 +38,12 @@ namespace LojaVirtual.Libraries
              */
             MailMessage mensagem = new MailMessage();
             mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
-            mensagem.To.Add("andersonlaoliveira1@gmail.com");
-            mensagem.Subject = "Contato Loja Virtual - E-mail: " + contato.Email;
+            mensagem.To.Add("elias.ribeiro.s@gmail.com");
+            mensagem.Subject = "Contato - LojaVirtual - E-mail: " + contato.Email;
             mensagem.Body = corpoMsg;
             mensagem.IsBodyHtml = true;
 
-
-            //Enviar mensagem via SMTP
+            //Enviar Mensagem via SMTP
             _smtp.Send(mensagem);
         }
 
@@ -61,6 +61,32 @@ namespace LojaVirtual.Libraries
             mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
             mensagem.To.Add(colaborador.Email);
             mensagem.Subject = "Colaborador - LojaVirtual - Senha do colaborador - " + colaborador.Nome;
+            mensagem.Body = corpoMsg;
+            mensagem.IsBodyHtml = true;
+
+            //Enviar Mensagem via SMTP
+            _smtp.Send(mensagem);
+        }
+
+        public void EnviarDadosDoPedido(Cliente cliente, Pedido pedido)
+        {
+            string corpoMsg = string.Format("<h2>Pedido - LojaVirtual</h2>" +
+
+                "Pedido realizado com sucesso!<br />" +
+                "<h3>Nº {0}</h3>" +
+                "<br /> Faça o login em nossa loja virtual e acompanhe o andamento.",
+                pedido.Id + "-" + pedido.TransactionId
+
+            );
+
+
+            /*
+             * MailMessage -> Construir a mensagem
+             */
+            MailMessage mensagem = new MailMessage();
+            mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
+            mensagem.To.Add(cliente.Email);
+            mensagem.Subject = "LojaVirtual - Pedido - " + pedido.Id + "-" + pedido.TransactionId;
             mensagem.Body = corpoMsg;
             mensagem.IsBodyHtml = true;
 

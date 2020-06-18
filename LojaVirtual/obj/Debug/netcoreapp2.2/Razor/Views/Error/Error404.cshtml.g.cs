@@ -29,27 +29,32 @@ using X.PagedList;
 #line default
 #line hidden
 #line 6 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.Constants;
-
-#line default
-#line hidden
-#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel;
 
 #line default
 #line hidden
-#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel.Components;
 
 #line default
 #line hidden
-#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ProdutoAgregador;
 
 #line default
 #line hidden
+#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Contants;
+
+#line default
+#line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fede7445a42970a7a0c94caaace0d14a0754753a", @"/Views/Error/Error404.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1f88e4652f86249a5440b00fb7091149c26c0de", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"db6c50a82ad95964959a9b5b95e8774fb6936668", @"/Views/_ViewImports.cshtml")]
     public class Views_Error_Error404 : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -104,7 +109,7 @@ using LojaVirtual.Models.ProdutoAgregador;
                 ");
             EndContext();
             BeginContext(341, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fede7445a42970a7a0c94caaace0d14a0754753a6913", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fede7445a42970a7a0c94caaace0d14a0754753a7085", async() => {
                 BeginContext(417, 15, true);
                 WriteLiteral("Volte a navegar");
                 EndContext();
@@ -129,7 +134,7 @@ using LojaVirtual.Models.ProdutoAgregador;
             WriteLiteral("\r\n            </p>\r\n        </div>\r\n        <div class=\"col-4\">\r\n            ");
             EndContext();
             BeginContext(513, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fede7445a42970a7a0c94caaace0d14a0754753a8666", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fede7445a42970a7a0c94caaace0d14a0754753a8838", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

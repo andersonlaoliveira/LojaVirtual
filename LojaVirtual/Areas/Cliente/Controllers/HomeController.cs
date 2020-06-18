@@ -40,7 +40,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
                 if(returnUrl == null)
                 {
-                    return new RedirectResult(Url.Action(nameof(Painel)));
+                    return RedirectToAction("Index", "Home", new { area = "" });
                 }
                 else
                 {
@@ -53,16 +53,14 @@ namespace LojaVirtual.Areas.Cliente.Controllers
                 ViewData["MSG_E"] = "Login ou senha não localizados. Verifique os dados digitados!";
                 return View();
             }
-
         }
 
         [HttpGet]
-        [ClienteAutorizacao]
-        public IActionResult Painel()
+        public IActionResult Sair()
         {
-            return new ContentResult() { Content = "Este é o painel do cliente!" };
+            _loginCliente.Logout();
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
-
 
         [HttpGet]
         public IActionResult CadastroCliente()
@@ -89,38 +87,6 @@ namespace LojaVirtual.Areas.Cliente.Controllers
                 {
                     return LocalRedirectPermanent(returnUrl);
                 }
-            }
-            return View();
-        }
-
-
-
-        [HttpGet]
-        public IActionResult CadastroEnderecoEntrega()
-        {
-            //TODO - Melhorar o HTML do campo Nome.
-            //TODO - Remover do javascript a opção de carregar o CEP ele esta no cookie para esta tela.
-            return View();
-        }
-        
-        [HttpPost]
-        public IActionResult CadastroEnderecoEntrega([FromForm]EnderecoEntrega enderecoentrega, string returnUrl = null)
-        {
-            if (ModelState.IsValid)
-            {
-                enderecoentrega.ClienteId = _loginCliente.GetCliente().Id;
-
-                _repositoryEnderecoEntrega.Cadastrar(enderecoentrega);
-                
-                if(returnUrl == null)
-                {
-                    //TODO - Listagem de endereços
-                }
-                else
-                {
-                    return LocalRedirectPermanent(returnUrl);
-                }
-
             }
             return View();
         }

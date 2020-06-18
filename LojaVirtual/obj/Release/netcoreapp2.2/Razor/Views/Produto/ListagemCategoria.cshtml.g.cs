@@ -29,27 +29,32 @@ using X.PagedList;
 #line default
 #line hidden
 #line 6 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.Constants;
-
-#line default
-#line hidden
-#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel;
 
 #line default
 #line hidden
-#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel.Components;
 
 #line default
 #line hidden
-#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ProdutoAgregador;
 
 #line default
 #line hidden
+#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Contants;
+
+#line default
+#line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"364caa0161d26120c9a1f7ed54c9ff134c2d53a1", @"/Views/Produto/ListagemCategoria.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1f88e4652f86249a5440b00fb7091149c26c0de", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"db6c50a82ad95964959a9b5b95e8774fb6936668", @"/Views/_ViewImports.cshtml")]
     public class Views_Produto_ListagemCategoria : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Categoria>
     {
         #line hidden
@@ -94,7 +99,7 @@ using LojaVirtual.Models.ProdutoAgregador;
             WriteLiteral("</span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n");
             EndContext();
             BeginContext(292, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:produto-listagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "364caa0161d26120c9a1f7ed54c9ff134c2d53a15036", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:produto-listagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "364caa0161d26120c9a1f7ed54c9ff134c2d53a15208", async() => {
             }
             );
             __ProdutoListagemViewComponentTagHelper = CreateTagHelper<global::AspNetCore.Views_Produto_ListagemCategoria.__Generated__ProdutoListagemViewComponentTagHelper>();

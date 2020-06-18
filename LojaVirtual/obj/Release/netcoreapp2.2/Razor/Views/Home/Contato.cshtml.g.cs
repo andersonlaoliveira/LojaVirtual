@@ -29,27 +29,32 @@ using X.PagedList;
 #line default
 #line hidden
 #line 6 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.Constants;
-
-#line default
-#line hidden
-#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel;
 
 #line default
 #line hidden
-#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 7 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ViewModel.Components;
 
 #line default
 #line hidden
-#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+#line 8 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
 using LojaVirtual.Models.ProdutoAgregador;
 
 #line default
 #line hidden
+#line 9 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Contants;
+
+#line default
+#line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"318f5495ab260f23f36b4cd2d89988f8c5d3e757", @"/Views/Home/Contato.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1f88e4652f86249a5440b00fb7091149c26c0de", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"db6c50a82ad95964959a9b5b95e8774fb6936668", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Contato : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("role", new global::Microsoft.AspNetCore.Html.HtmlString("form"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -139,7 +144,7 @@ using LojaVirtual.Models.ProdutoAgregador;
             WriteLiteral("\r\n                                ");
             EndContext();
             BeginContext(1825, 2539, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "318f5495ab260f23f36b4cd2d89988f8c5d3e7577614", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "318f5495ab260f23f36b4cd2d89988f8c5d3e7577786", async() => {
                 BeginContext(1884, 636, true);
                 WriteLiteral(@"
                                     <div class=""form-group"">

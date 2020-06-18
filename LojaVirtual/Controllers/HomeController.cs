@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Models.ViewModel;
+using LojaVirtual.Libraries.Email;
 
 namespace LojaVirtual.Controllers
 {

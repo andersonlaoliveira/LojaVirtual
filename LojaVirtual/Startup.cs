@@ -26,6 +26,7 @@ using LojaVirtual.Libraries.Gerenciador.Frete;
 using WSCorreios;
 using LojaVirtual.Libraries;
 using LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe;
+using LojaVirtual.Libraries.Email;
 
 namespace LojaVirtual
 {
@@ -99,10 +100,7 @@ namespace LojaVirtual
              * Session - Configuração
              */
             services.AddMemoryCache(); //Guardar os dados na memória
-            services.AddSession(options =>
-            {
-                options.Cookie.IsEssential = true;
-            });
+            
 
             services.AddScoped<Sessao>();
             services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
@@ -114,15 +112,21 @@ namespace LojaVirtual
             services.AddMvc(options =>
             {
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "O campo deve ser preenchido!");
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            .AddSessionStateTempDataProvider();
 
-            /* USO DO SQL SERVER LOCAL
+            services.AddSession(options =>
+            {
+                options.Cookie.IsEssential = true;
+            });
+
+            /* USO DO SQL SERVER LOCAL*/
             string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LojaVirtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));*/
+            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
 
-            /* USO DO SQL SERVER HOSPEDAGEM*/
+            /* USO DO SQL SERVER HOSPEDAGEM
             string connectionHost = "Server=apolo.hostsrv.org;Database=trayclou_;User Id=lojavirtual;Password=l0j@v!rtu@l2020;";
-            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connectionHost));
+            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connectionHost));*/
 
 
             /* USO DO MYSQL

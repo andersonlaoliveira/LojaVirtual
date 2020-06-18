@@ -29,9 +29,11 @@ namespace LojaVirtual.Libraries.Texto
         {
             //10000 -> "10000" -> "100.00" -> 100.00
             string valorPagarMeString = valor.ToString();
-            string valorDecimalString = valorPagarMeString.Substring(0, valorPagarMeString.Length - 2) + "." + valorPagarMeString.Substring(valorPagarMeString.Length - 2);
+            string valorDecimalString = valorPagarMeString.Substring(0, valorPagarMeString.Length - 2) + "," + valorPagarMeString.Substring(valorPagarMeString.Length - 2);
 
-            return decimal.Parse(valorDecimalString);
+            var dec = decimal.Parse(valorDecimalString);
+
+            return dec;
         }
     }
 }
