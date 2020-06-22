@@ -10,11 +10,13 @@ namespace LojaVirtual.Repositories.Contracts
     public interface IPedidoRepository
     {
         //CRUD
-
         void Cadastrar(Pedido pedido);
         void Atualizar(Pedido pedido);
-
         Pedido ObterPedido(int Id);
-        IPagedList<Pedido> ObterTodosPedidosCliente(int? pagina, int clienteId);
+        IPagedList<Pedido> ObterTodosPedidoCliente(int? pagina, int clienteId);
+
+        IPagedList<Pedido> ObterTodosPedido(int? pagina, string codigoPedido, string cpf);
+
+        List<Pedido> ObterTodosPedidosRealizados();
     }
 }

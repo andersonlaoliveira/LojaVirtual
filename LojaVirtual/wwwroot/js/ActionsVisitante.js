@@ -10,7 +10,14 @@
     AJAXCalcularFrete(false);
 
     AJAXEnderecoEntregaCalcularFrete();
+
+    PedidoBtnImprimir();
 });
+function PedidoBtnImprimir() {
+    $(".btn-imprimir").click(function () {
+        window.print();
+    });
+}
 function AJAXEnderecoEntregaCalcularFrete() {
     $("input[name=endereco]").change(function () {
 
@@ -173,6 +180,8 @@ function AJAXCalcularFrete(callByButton) {
             if ($(".no-cep").length <= 0) {
                 $(".cep").val($.cookie('Carrinho.CEP'));
             }
+
+
         }
     }
 

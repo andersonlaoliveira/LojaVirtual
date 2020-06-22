@@ -10,10 +10,10 @@ namespace LojaVirtual.Models
     {
         //PK
         public int Id { get; set; }
-        
-        [ForeignKey("ClienteId")]
+
+        [ForeignKey("Cliente")]
         public int? ClienteId { get; set; }
-        public string TransactionId { get; set; }
+        public string TransactionId { get; set; } //PagarMe - Transaction -> ID.
 
         //Frete
         public string FreteEmpresa { get; set; } //ECT - Correios
@@ -25,15 +25,16 @@ namespace LojaVirtual.Models
         public string DadosProdutos { get; set; } //ProdutoItem - JSON
 
         public DateTime DataRegistro { get; set; }
-        public string Situacao { get; set; } // U
+        public string Situacao { get; set; }
 
-        //URL - Com site da Receita - Nota Fiscal
+        //URL - Com Site da Receita - Nota Fiscal
         public string NFE { get; set; }
 
+        public virtual Cliente Cliente { get; set; }
+
         [ForeignKey("PedidoId")]
-        public virtual ICollection<PedidoSituacao> PedidoSituacaos { get; set; }
+        public virtual ICollection<PedidoSituacao> PedidoSituacoes { get; set; }
 
-        //TODO - Pedido -> Historico de situação
-
+        //TODO - FK - Pedido -> Historicos Situacao.
     }
 }

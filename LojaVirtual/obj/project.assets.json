@@ -28,6 +28,20 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Coravel/3.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "2.1.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Coravel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Coravel.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4962,6 +4976,18 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
+      ]
+    },
+    "Coravel/3.6.1": {
+      "sha512": "RPQk+QMkSkwXAnCyfQRNqAOAcLTRC3UGpMsHIdxw5sCgLCDsonCjsYGbY1SsjR6agndN5K3bDcRB4DjXIvHCUg==",
+      "type": "package",
+      "path": "coravel/3.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coravel.3.6.1.nupkg.sha512",
+        "coravel.nuspec",
+        "lib/netstandard2.0/Coravel.dll"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -13657,6 +13683,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.1.0",
+      "Coravel >= 3.6.1",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13713,6 +13740,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[6.1.0, )"
+          },
+          "Coravel": {
+            "target": "Package",
+            "version": "[3.6.1, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",

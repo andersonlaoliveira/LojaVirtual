@@ -29,11 +29,13 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
 
             PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
             PagarMeService.DefaultEncryptionKey = _configuration.GetValue<String>("Pagamento:PagarMe:EncryptionKey");
+            int DaysExpire = _configuration.GetValue<int>("Pagamento:PagarMe:BoletoDiaExpiracao");
 
             Transaction transaction = new Transaction();
 
-            transaction.Amount = Convert.ToInt32(valor);
+            transaction.Amount = Mascara.ConverterValorPagarMe(valor);
             transaction.PaymentMethod = PaymentMethod.Boleto;
+            transaction.BoletoExpirationDate = DateTime.Now.AddDays(DaysExpire);
 
             transaction.Customer = new Customer
             {
@@ -253,6 +255,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
             }
 
             return lista;
+        }
+
+
+        public Transaction ObterTransacao(string transactionId)
+        {
+            PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
+
+            return PagarMeService.GetDefaultService().Transactions.Find(transactionId);
         }
 
     }

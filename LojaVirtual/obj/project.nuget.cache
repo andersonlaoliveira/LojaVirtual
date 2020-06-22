@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/O418eynkkNGjxq3/a/7MD0jqHfA/5uay6ZAMyNjYD1ROSG0pW3Z+bWF9yjnlUMRLTmiUL/RwMMnodhZMU3ew==",
+  "dgSpecHash": "OKDM36SRySiQghSdParb1o9jNvAkG1i3nadK/HSUXh7ptDEtDSCdqGekiV1sJCi//ygmZZMZZfpnOdRoZaWMkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ander\\Desktop\\Git\\LojaVirtual\\Novo\\LojaVirtual\\LojaVirtual\\LojaVirtual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\automapper\\8.1.0\\automapper.8.1.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.0\\automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\coravel\\3.6.1\\coravel.3.6.1.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

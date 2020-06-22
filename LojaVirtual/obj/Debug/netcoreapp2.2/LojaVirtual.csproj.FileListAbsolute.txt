@@ -24,12 +24,14 @@ C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\ne
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\LojaVirtual.RazorCoreGenerate.cache
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Atualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\AtualizarSenha.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Cadastrar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Index.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Atualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Cadastrar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Index.cshtml.g.cs
-C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\CadastroCliente.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Login.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Pedido\Index.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Pedido\Visualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\_ViewImports.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\_ViewStart.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Categoria\Atualizar.cshtml.g.cs
@@ -43,6 +45,8 @@ C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\ne
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Login.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Painel.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\RecuperarSenha.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Index.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Visualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Produto\Atualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Produto\Cadastrar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Produto\Index.cshtml.g.cs
@@ -66,6 +70,7 @@ C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\ne
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Produto\Visualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Menu\_Submenu.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PedidoSituacao\Default.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ProdutoListagem\Default.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Mensagem.cshtml.g.cs

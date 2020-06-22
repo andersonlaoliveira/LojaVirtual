@@ -38,8 +38,23 @@ using LojaVirtual.Models.Constants;
 
 #line default
 #line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#line 11 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Json.Resolver;
+
+#line default
+#line hidden
+#line 12 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ad5ce9a8233a581a49fc0193d3e49fa8741eb125", @"/Areas/Colaborador/Views/Produto/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"534859548de2b4cb43772b1276347fed152c4b8d", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"691cde2a87d923e8c56f57e0e035bee1deb34412", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
     public class Areas_Colaborador_Views_Produto_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<X.PagedList.IPagedList<LojaVirtual.Models.ProdutoAgregador.Produto>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "get", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -84,7 +99,7 @@ using LojaVirtual.Models.Constants;
             WriteLiteral("\r\n<h1>Produto</h1>\r\n\r\n<!-- Formulário -->\r\n");
             EndContext();
             BeginContext(215, 317, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb1256894", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb1257463", async() => {
                 BeginContext(234, 114, true);
                 WriteLiteral("\r\n    <div class=\"form-group\">\r\n        <label for=\"pesquisa\"></label>\r\n        <input type=\"text\" name=\"pesquisa\"");
                 EndContext();
@@ -126,7 +141,7 @@ WriteAttributeValue("", 356, pesquisa, 356, 9, false);
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(626, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb1259637", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb12510206", async() => {
                 BeginContext(676, 9, true);
                 WriteLiteral("Cadastrar");
                 EndContext();
@@ -248,7 +263,7 @@ WriteAttributeValue("", 356, pesquisa, 356, 9, false);
             WriteLiteral("</td>\r\n                        <td>\r\n                            ");
             EndContext();
             BeginContext(1700, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb12515594", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb12516164", async() => {
                 BeginContext(1779, 9, true);
                 WriteLiteral("Atualizar");
                 EndContext();
@@ -284,7 +299,7 @@ WriteAttributeValue("", 356, pesquisa, 356, 9, false);
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(1822, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb12518091", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad5ce9a8233a581a49fc0193d3e49fa8741eb12518661", async() => {
                 BeginContext(1896, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

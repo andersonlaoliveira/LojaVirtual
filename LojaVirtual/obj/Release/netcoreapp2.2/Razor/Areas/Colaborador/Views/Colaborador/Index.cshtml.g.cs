@@ -38,8 +38,23 @@ using LojaVirtual.Models.Constants;
 
 #line default
 #line hidden
+#line 10 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#line 11 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Json.Resolver;
+
+#line default
+#line hidden
+#line 12 "C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eabf304801780335d8fdf6b80fd9b7ee255f2578", @"/Areas/Colaborador/Views/Colaborador/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"534859548de2b4cb43772b1276347fed152c4b8d", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"691cde2a87d923e8c56f57e0e035bee1deb34412", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
     public class Areas_Colaborador_Views_Colaborador_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<X.PagedList.IPagedList<LojaVirtual.Models.Colaborador>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Cadastrar", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -81,7 +96,7 @@ using LojaVirtual.Models.Constants;
             WriteLiteral("\r\n<h1>Colaborador</h1>\r\n\r\n");
             EndContext();
             BeginContext(130, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f25786567", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f25787136", async() => {
                 BeginContext(180, 9, true);
                 WriteLiteral("Cadastrar");
                 EndContext();
@@ -191,7 +206,7 @@ using LojaVirtual.Models.Constants;
             WriteLiteral("</td>\r\n                        <td>\r\n                            ");
             EndContext();
             BeginContext(1160, 99, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257812035", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257812604", async() => {
                 BeginContext(1244, 11, true);
                 WriteLiteral("Gerar Senha");
                 EndContext();
@@ -227,7 +242,7 @@ using LojaVirtual.Models.Constants;
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(1289, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257814544", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257815113", async() => {
                 BeginContext(1372, 9, true);
                 WriteLiteral("Atualizar");
                 EndContext();
@@ -263,7 +278,7 @@ using LojaVirtual.Models.Constants;
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(1415, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257817049", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eabf304801780335d8fdf6b80fd9b7ee255f257817618", async() => {
                 BeginContext(1493, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

@@ -5,13 +5,22 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace LojaVirtual.Libraries.Arquivo
 {
     public class GerenciadorArquivo
     {
+        private IConfiguration _configuration;
+
+        public GerenciadorArquivo(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public static string CadastrarImagemProduto(IFormFile file)
         {
+            //string URL = _configuration.GetValue<String>("ImagemURL:CaminhoRUL");
             var NomeArquivo = Path.GetFileName(file.FileName);
             var Caminho = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/temp", NomeArquivo);
 

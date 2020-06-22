@@ -11,13 +11,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
-      <publishTime>06/17/2020 15:09:32</publishTime>
+      <publishTime>06/18/2020 19:20:34</publishTime>
     </File>
     <File Include="appsettings.json">
       <publishTime>05/25/2020 09:57:34</publishTime>
     </File>
     <File Include="appsettings.Production.json">
-      <publishTime>06/17/2020 13:47:21</publishTime>
+      <publishTime>06/18/2020 19:20:25</publishTime>
     </File>
     <File Include="AutoMapper.dll">
       <publishTime>04/25/2019 21:00:34</publishTime>
@@ -32,22 +32,22 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/24/2019 19:58:14</publishTime>
     </File>
     <File Include="LojaVirtual.deps.json">
-      <publishTime>06/17/2020 16:12:47</publishTime>
+      <publishTime>06/19/2020 20:33:01</publishTime>
     </File>
     <File Include="LojaVirtual.dll">
-      <publishTime>06/17/2020 16:11:03</publishTime>
+      <publishTime>06/19/2020 20:32:30</publishTime>
     </File>
     <File Include="LojaVirtual.pdb">
-      <publishTime>06/17/2020 16:11:03</publishTime>
+      <publishTime>06/19/2020 20:32:30</publishTime>
     </File>
     <File Include="LojaVirtual.runtimeconfig.json">
       <publishTime>06/16/2020 10:11:43</publishTime>
     </File>
     <File Include="LojaVirtual.Views.dll">
-      <publishTime>06/17/2020 16:12:31</publishTime>
+      <publishTime>06/19/2020 20:32:36</publishTime>
     </File>
     <File Include="LojaVirtual.Views.pdb">
-      <publishTime>06/17/2020 16:12:31</publishTime>
+      <publishTime>06/19/2020 20:32:36</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Mvc.Core.dll">
       <publishTime>04/19/2019 23:24:44</publishTime>
@@ -155,10 +155,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/15/2019 08:37:52</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>06/17/2020 16:12:47</publishTime>
+      <publishTime>06/19/2020 20:33:01</publishTime>
     </File>
     <File Include="wwwroot/css/StyleSheet.css">
-      <publishTime>06/17/2020 13:19:36</publishTime>
+      <publishTime>06/19/2020 13:54:07</publishTime>
     </File>
     <File Include="wwwroot/favicon.ico">
       <publishTime>05/12/2020 10:30:17</publishTime>
@@ -200,7 +200,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/25/2020 09:47:08</publishTime>
     </File>
     <File Include="wwwroot/js/ActionsVisitante.js">
-      <publishTime>06/09/2020 13:45:44</publishTime>
+      <publishTime>06/19/2020 16:28:30</publishTime>
     </File>
     <File Include="wwwroot/paginas/cadastro.html">
       <publishTime>01/26/2019 08:57:02</publishTime>

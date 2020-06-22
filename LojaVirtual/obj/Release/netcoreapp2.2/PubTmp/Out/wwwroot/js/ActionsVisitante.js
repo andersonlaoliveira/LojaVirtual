@@ -10,7 +10,14 @@
     AJAXCalcularFrete(false);
 
     AJAXEnderecoEntregaCalcularFrete();
+
+    PedidoBtnImprimir();
 });
+function PedidoBtnImprimir() {
+    $(".btn-imprimir").click(function () {
+        window.print();
+    });
+}
 function AJAXEnderecoEntregaCalcularFrete() {
     $("input[name=endereco]").change(function () {
 
@@ -170,7 +177,11 @@ function AJAXCalcularFrete(callByButton) {
     $(".btn-continuar").addClass("disabled");
     if (callByButton == false) {
         if ($.cookie('Carrinho.CEP') != undefined) {
-            $(".cep").val($.cookie('Carrinho.CEP'));
+            if ($(".no-cep").length <= 0) {
+                $(".cep").val($.cookie('Carrinho.CEP'));
+            }
+
+
         }
     }
 

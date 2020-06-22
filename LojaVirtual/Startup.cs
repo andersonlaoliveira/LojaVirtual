@@ -27,6 +27,8 @@ using WSCorreios;
 using LojaVirtual.Libraries;
 using LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe;
 using LojaVirtual.Libraries.Email;
+using Coravel;
+using LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable;
 
 namespace LojaVirtual
 {
@@ -120,8 +122,13 @@ namespace LojaVirtual
                 options.Cookie.IsEssential = true;
             });
 
+            /* 
+               ******************** CONEXÃO COM O BANCO DE DADOS ********************
+            */
+
             /* USO DO SQL SERVER LOCAL*/
-            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LojaVirtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LojaVirtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string connection = Configuration.GetValue<String>("BancoDados:Connection");
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
 
             /* USO DO SQL SERVER HOSPEDAGEM
@@ -132,6 +139,13 @@ namespace LojaVirtual
             /* USO DO MYSQL
             string connectionMysql = "Server=apolo.hostsrv.org;Database=LojaVirtual;Uid=lojavirtual;Pwd=l0j@v!rtu@l2020;";
             services.AddDbContext<LojaVirtualContext>(options => options.UseMySql(connectionMysql)); */
+
+
+            /* 
+               ******************** CORAVEL ********************
+            */
+            services.AddTransient<PedidoPagamentoSituacaoJob>();
+            services.AddScheduler();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -193,6 +207,13 @@ namespace LojaVirtual
                 routes.MapRoute(
                     name: "default",
                     template: "/{controller=Home}/{action=Index}/{id?}");
+            });
+
+            /* 
+               ******************** CORAVEL ********************
+            */
+            app.ApplicationServices.UseScheduler(scheduler => {
+                scheduler.Schedule<PedidoPagamentoSituacaoJob>().EveryTenSeconds();
             });
         }
     }
