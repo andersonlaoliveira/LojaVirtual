@@ -5,6 +5,9 @@
     MudarQuantidadeProdutoCarrinho();
 
     MascaraCEP();
+    MascaraCPF();
+    MascaraNascimento();
+    MascaraTelefone();
     AJAXBuscarCEP();
     AcaoCalcularFreteBTN();
     AJAXCalcularFrete(false);
@@ -74,21 +77,13 @@ function AJAXEnderecoEntregaCalcularFrete() {
                 /*
                 $(".container-frete").html(html);
                 $(".container-frete").find("input[type=radio]").change(function () {
-
                     $.cookie("Carrinho.TipoFrete", $(this).val());
                     $(".btn-continuar").removeClass("disabled");
-
                     var valorFrete = parseFloat($(this).parent().find("input[type=hidden]").val());
-
-
-
                     $(".frete").text(numberToReal(valorFrete));
-
                     var subtotal = parseFloat($(".subtotal").text().replace("R$", "").replace(".", "").replace(",", "."));
                     console.info("Subtotal: " + subtotal);
-
                     var total = valorFrete + subtotal;
-
                     $(".total").text(numberToReal(total));
                 });
                 */
@@ -165,6 +160,16 @@ function AJAXBuscarCEP() {
 }
 function MascaraCEP() {
     $(".cep").mask("00.000-000");
+}
+function MascaraCPF() {
+    $(".cpf").mask("000.000.000-00");
+}
+function MascaraNascimento() {
+    $(".nascimento").mask("00/00/0000");
+}
+function MascaraTelefone() {
+    //$('.telefone').mask('(00) 0000-0000');
+    $(".telefone").mask("(00) 0000-00009");
 }
 function AcaoCalcularFreteBTN() {
     $(".btn-calcular-frete").click(function (e) {
@@ -290,10 +295,6 @@ function OrquestradorDeAcoesProduto(operacao, botao) {
      * Chamada de Métodos
      */
     AlteracoesVisuaisProdutoCarrinho(produto, operacao);
-
-    //TODO - Adicionar validações.
-
-    //TODO - Atualizar o subtotal do produto
 }
 function AlteracoesVisuaisProdutoCarrinho(produto, operacao) {
     if (operacao == "aumentar") {
@@ -382,7 +383,6 @@ function MoverScrollOrdenacao() {
 }
 function MudarOrdenacao() {
     $("#ordenacao").change(function () {
-        //TODO - Redirecionar para a tela Home/Index passando as QueryString de Ordenação e mantendo a Pagina e a pesquisa.
         var Pagina = 1;
         var Pesquisa = "";
         var Ordenacao = $(this).val();

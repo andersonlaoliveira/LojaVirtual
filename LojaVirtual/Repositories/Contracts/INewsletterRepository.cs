@@ -11,6 +11,6 @@ namespace LojaVirtual.Repositories.Contracts
         void Cadastrar(NewsletterEmail newsletter);
 
         IEnumerable<NewsletterEmail> ObterTodasAsNewsLetter();
-
+        int QuantidadeTotalNewsletters();
     }
 }

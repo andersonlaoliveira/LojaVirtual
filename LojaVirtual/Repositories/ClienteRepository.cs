@@ -50,6 +50,11 @@ namespace LojaVirtual.Repositories
             return _banco.Clientes.Find(Id);
         }
 
+        public Cliente ObterClientePorEmail(string email)
+        {
+            return _banco.Clientes.FirstOrDefault(a => a.Email == email);
+        }
+
         public IPagedList<Cliente> ObterTodosOsClientes(int? pagina, string pesquisa)
         {
             int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
@@ -65,6 +70,11 @@ namespace LojaVirtual.Repositories
             }
 
             return bancoCliente.ToPagedList<Cliente>(NumeroPagina, RegistroPorPagina);
+        }
+
+        public int QuantidadeTotalClientes()
+        {
+            return _banco.Clientes.Count();
         }
     }
 }

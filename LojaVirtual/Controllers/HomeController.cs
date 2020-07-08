@@ -14,6 +14,7 @@ using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Models.ViewModel;
 using LojaVirtual.Libraries.Email;
+using Microsoft.Extensions.Logging;
 
 namespace LojaVirtual.Controllers
 {
@@ -24,12 +25,14 @@ namespace LojaVirtual.Controllers
         
         private GerenciarEmail _gerenciarEmail;
         private IProdutoRepository _produtoRepository;
+        private ILogger<HomeController> _logger;
 
-        public HomeController(IProdutoRepository produtoRepository, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
+        public HomeController(IProdutoRepository produtoRepository, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail, ILogger<HomeController> logger)
         {
             _repositoryNewsletter = repositoryNewsletter;
             _gerenciarEmail = gerenciarEmail;
             _produtoRepository = produtoRepository;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -37,16 +40,13 @@ namespace LojaVirtual.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Index([FromForm]NewsletterEmail newsletter)
         {
             if (ModelState.IsValid)
             {
                 _repositoryNewsletter.Cadastrar(newsletter);
-                /*ANTIGO...
-                _banco.NewsletterEmails.Add(newsletter);
-                _banco.SaveChanges();
-                */
                 TempData["MSG_S"] = "E-mail cadastrado com sucesso!";
                 
                 return RedirectToAction(nameof(Index));
@@ -102,17 +102,9 @@ namespace LojaVirtual.Controllers
             {
                 ViewData["MSG_E"] = "Opps! Ocorreu um erro, tente novamente mais tarde.";
 
-                //TODO - Implementar log
+                _logger.LogError(e, "HomeController > ContatoAcao - Exception");
             }
-            //
-
-            /*
-            return new ContentResult() { Content = string.Format("Dados recebidos com sucesso! " +
-                " <br> Nome: {0} <br> E-mail: {1} <br>Texto: {2}",
-                contato.Nome, contato.Email, contato.Texto),
-                ContentType = "text/html"
-            };
-            */ 
+             
             return View("Contato");
         }
 

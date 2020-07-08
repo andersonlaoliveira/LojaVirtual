@@ -1,11 +1,11 @@
 ﻿using LojaVirtual.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 
 namespace LojaVirtual.Libraries.Arquivo
 {
@@ -20,15 +20,18 @@ namespace LojaVirtual.Libraries.Arquivo
 
         public static string CadastrarImagemProduto(IFormFile file)
         {
-            //string URL = _configuration.GetValue<String>("ImagemURL:CaminhoRUL");
             var NomeArquivo = Path.GetFileName(file.FileName);
+            //var wwwrootUploadsTemp = _configuration.GetValue<String>("PatchImagemProduto:wwwrootUploadsTemp");
             var Caminho = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/temp", NomeArquivo);
+            //var Caminho = Path.Combine(Directory.GetCurrentDirectory(), wwwrootUploadsTemp, NomeArquivo);
 
             using (var stream = new FileStream(Caminho, FileMode.Create))
             {
                 file.CopyTo(stream);
             }
+            //var uploadsTemp = _configuration.GetValue<String>("PatchImagemProduto:uploadsTemp");
             return Path.Combine("/uploads/temp", NomeArquivo).Replace("\\", "/");
+            //return Path.Combine(uploadsTemp, NomeArquivo).Replace("\\", "/");
         }
 
         public static bool ExcluirImagemProduto(string caminho)

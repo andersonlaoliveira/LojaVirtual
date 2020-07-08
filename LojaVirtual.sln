@@ -5,7 +5,17 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual", "LojaVirtual\LojaVirtual.csproj", "{D1E14E1B-9F8A-4052-A3D8-D1D8CD5FDCAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PagarMe", "PagarMe", "{84C80783-93BF-4A21-81C5-18CEF503D630}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PagarMeCore", "PagarMe\PagarMeCore\PagarMeCore.csproj", "{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PagarMe.Shared", "PagarMe\PagarMe.Shared\PagarMe.Shared.shproj", "{A1E35F76-C32B-4490-BB52-282A27E0A37D}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		PagarMe\PagarMe.Shared\PagarMe.Shared.projitems*{23e09a6f-462f-4a73-89ec-be6b2a31b4a1}*SharedItemsImports = 5
+		PagarMe\PagarMe.Shared\PagarMe.Shared.projitems*{a1e35f76-c32b-4490-bb52-282a27e0a37d}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,9 +25,17 @@ Global
 		{D1E14E1B-9F8A-4052-A3D8-D1D8CD5FDCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1E14E1B-9F8A-4052-A3D8-D1D8CD5FDCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1E14E1B-9F8A-4052-A3D8-D1D8CD5FDCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23E09A6F-462F-4A73-89EC-BE6B2A31B4A1} = {84C80783-93BF-4A21-81C5-18CEF503D630}
+		{A1E35F76-C32B-4490-BB52-282A27E0A37D} = {84C80783-93BF-4A21-81C5-18CEF503D630}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {220A68C6-040A-4536-AB4C-E409E6AD72F7}

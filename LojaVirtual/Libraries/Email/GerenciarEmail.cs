@@ -1,10 +1,15 @@
-﻿using LojaVirtual.Models;
+﻿using LojaVirtual.Libraries.Seguranca;
+using LojaVirtual.Models;
+using LojaVirtual.Repositories.Contracts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace LojaVirtual.Libraries.Email
@@ -13,11 +18,15 @@ namespace LojaVirtual.Libraries.Email
     {
         private SmtpClient _smtp;
         private IConfiguration _configuration;
+        private IPedidoRepository _pedidoRepository;
+        private IHttpContextAccessor _httpContextAccessor;
 
-        public GerenciarEmail(SmtpClient smtp, IConfiguration configuration)
+        public GerenciarEmail(SmtpClient smtp, IConfiguration configuration, IPedidoRepository pedidoRepository, IHttpContextAccessor httpContextAccessor)
         {
             _smtp = smtp;
             _configuration = configuration;
+            _pedidoRepository = pedidoRepository;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public void EnviarContatoPorEmail(Contato contato)
@@ -44,6 +53,9 @@ namespace LojaVirtual.Libraries.Email
             mensagem.IsBodyHtml = true;
 
             //Enviar Mensagem via SMTP
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+
+            _smtp.EnableSsl = true;
             _smtp.Send(mensagem);
         }
 
@@ -64,7 +76,10 @@ namespace LojaVirtual.Libraries.Email
             mensagem.Body = corpoMsg;
             mensagem.IsBodyHtml = true;
 
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+
             //Enviar Mensagem via SMTP
+            _smtp.EnableSsl = true;
             _smtp.Send(mensagem);
         }
 
@@ -87,6 +102,77 @@ namespace LojaVirtual.Libraries.Email
             mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
             mensagem.To.Add(cliente.Email);
             mensagem.Subject = "LojaVirtual - Pedido - " + pedido.Id + "-" + pedido.TransactionId;
+            mensagem.Body = corpoMsg;
+            mensagem.IsBodyHtml = true;
+
+            //Enviar Mensagem via SMTP
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+
+            _smtp.EnableSsl = true;
+            _smtp.Send(mensagem);
+        }
+
+        public void EnviarConfirmacaoPagamento(Pedido pedido)
+        {
+            Cliente cliente = pedido.Cliente;
+            string corpoMsg = string.Format("<h2>Pedido - LojaVirtual</h2>" +
+
+                "Recebemos a confirmação do pagamento do seu pedido!<br />" +
+                "<h3>Nº {0}</h3>" +
+                "<br /> Faça o login em nossa loja virtual e acompanhe o andamento.",
+                pedido.Id + "-" + pedido.TransactionId
+
+            );
+
+
+            /*
+             * MailMessage -> Construir a mensagem
+             */
+            MailMessage mensagem = new MailMessage();
+            mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
+            mensagem.To.Add(cliente.Email);
+            mensagem.Subject = "LojaVirtual - Pedido - " + pedido.Id + "-" + pedido.TransactionId;
+            mensagem.Body = corpoMsg;
+            mensagem.IsBodyHtml = true;
+
+            //Enviar Mensagem via SMTP
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+
+            _smtp.EnableSsl = true;
+            _smtp.Send(mensagem);
+        }
+
+        public void EnviarLinkResetarSenha(dynamic usuario, string idCrip)
+        {
+            var request = _httpContextAccessor.HttpContext.Request;
+            string url = "";
+            if (usuario.GetType() == typeof(Cliente))
+            {
+                url = $"{request.Scheme}://{request.Host}/Cliente/Home/CriarSenha/{idCrip}";
+            }
+            else
+            {
+                url = $"{request.Scheme}://{request.Host}/Colaborador/Home/CriarSenha/{idCrip}";
+            }
+
+
+            string corpoMsg = string.Format(
+                "<h2>Criar nova Senha para {1}({2})</h2>" +
+                "Clique no link abaixo para criar uma nova senha!<br />" +
+                "<a href='{0}' target='_blank'>{0}</a>",
+                url,
+                usuario.Nome,
+                usuario.Email
+            );
+
+
+            /*
+             * MailMessage -> Construir a mensagem
+             */
+            MailMessage mensagem = new MailMessage();
+            mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
+            mensagem.To.Add(usuario.Email);
+            mensagem.Subject = "LojaVirtual - Criar nova senha - " + usuario.Nome;
             mensagem.Body = corpoMsg;
             mensagem.IsBodyHtml = true;
 

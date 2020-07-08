@@ -43,6 +43,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
         {
             if (ModelState.IsValid)
             {
+                cliente.Situacao = LojaVirtual.Models.Constants.SituacaoConstant.Ativo;
                 _clienteRepository.Cadastrar(cliente);
                 _loginCliente.Login(cliente);
 

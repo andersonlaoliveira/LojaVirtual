@@ -1,6 +1,7 @@
 ﻿using LojaVirtual.Models.ProdutoAgregador;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace LojaVirtual.Models
 {
     public class Imagem
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Caminho { get; set; }
 

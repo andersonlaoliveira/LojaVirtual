@@ -16,7 +16,7 @@
         <div class="row">
             @foreach (var produto in Model.lista)
             {
-                <a asp-controller="Produto" asp-action="Visualizar" asp-route-id="@produto.Id">
+                <a asp-controller="Produto" asp-action="Visualizar" asp-route-slug="@produto.Slug">
                     <div class="col-md-3">
                         <figure class="card card-product">
                             <div class="img-wrap">
@@ -34,7 +34,16 @@
                                 <h4 class="title">@produto.Nome</h4>
                             </figcaption>
                             <div class="bottom-wrap">
-                                <a asp-controller="CarrinhoCompra" asp-action="AdicionarItem" asp-route-id="@produto.Id" class="btn btn-sm btn-primary float-right">Adicionar ao Carrinho</a>
+
+                                @if (produto.Estoque > 0)
+                                {
+                                    <a asp-controller="CarrinhoCompra" asp-action="AdicionarItem" asp-route-id="@produto.Id" class="btn btn-sm btn-primary float-right">Adicionar ao Carrinho</a>
+                                }
+                                else
+                                {
+                                    <a href="#" class="btn btn-danger" onclick="javascript:return false;" style="cursor: default">Esgotado</a>
+                                }
+
                                 <div class="price-wrap h5">
                                     <span class="price-new">@produto.Valor.ToString("C")</span>
                                 </div> <!-- price-wrap.// -->

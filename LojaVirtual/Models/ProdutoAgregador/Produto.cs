@@ -6,12 +6,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using LojaVirtual.Libraries.Validacao;
 
 namespace LojaVirtual.Models.ProdutoAgregador
 {
     public class Produto
     {
         //PK
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
@@ -19,19 +22,41 @@ namespace LojaVirtual.Models.ProdutoAgregador
         public string Nome { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
-        [Display(Name = "Descrição")]
+        [MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
+        [SlugProdutoUnico(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E011")]
+        public string Slug { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+        [Display(Name = "Descrição curta")]
         [JsonIgnore]
         public string Descricao { get; set; }
 
+        [Display(Name = "Descrição interna")]
+        public string DescricaoInterna { get; set; }
+
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
-        [Display(Name = "Preço")]
+        [Display(Name = "Especificação Técnica")]
+        [JsonIgnore]
+        public string EspecificacoTecnica { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+        [Display(Name = "Preço promocional")]
         [JsonIgnore]
         public decimal Valor { get; set; }
+
+        [Display(Name = "Preço venda")]
+        [JsonIgnore]
+        public decimal ValorVenda { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+        [Display(Name = "Preço custo")]
+        [JsonIgnore]
+        public decimal ValorCusto { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
         [Range(0, 1000000, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E006")]
         [JsonIgnore]
-        public int Quantidade { get; set; }
+        public int Estoque { get; set; }
 
         //Frete - Correios
         [Range(0.001, 30, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E006")]

@@ -21,7 +21,53 @@
             <h3>Dados pedido</h3>
             <table class="table table-bordered">
                 <tr>
-                    <td colspan="2"><strong>Situação do pedido: </strong>@Model.Situacao</td>
+                    <td colspan="2">
+                        <strong>Situação do pedido:</strong>
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.PEDIDO_REALIZADO)
+                        {
+                            <span class="label pedido-realizado">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.PAGAMENTO_APROVADO)
+                        {
+                            <span class="label pagamento-aprovado">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.NF_EMITIDA)
+                        {
+                            <span class="label nf-emitida">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.EM_TRANSPORTE)
+                        {
+                            <span class="label em-transporte">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.ENTREGUE)
+                        {
+                            <span class="label entregue">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.FINALIZADO)
+                        {
+                            <span class="label finalizado">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER)
+                        {
+                            <span class="label devolver">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+                        {
+                            <span class="label devolver-entregue">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLUCAO_ACEITA)
+                        {
+                            <span class="label devolucao-aceita">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLUCAO_REJEITADA)
+                        {
+                            <span class="label devolucao-rejeitada">@Model.Situacao</span>
+                        }
+                        @if (Model.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER_ESTORNO)
+                        {
+                            <span class="label estorno">@Model.Situacao</span>
+                        }
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>Cliente: </strong> @transacao.Customer.Name</td>
@@ -29,7 +75,7 @@
                 </tr>
                 <tr>
                     <td><strong>Forma pagamento: </strong>@Model.FormaPagamento</td>
-                    <td><strong>Nota Fiscal Eletronica: </strong>- @Model.NFE</td>
+                    <td><strong>Nota Fiscal Eletronica: </strong>- @Html.Raw(Model.NFE == null ? "-" : "<a href='" + Model.NFE + "' target='_blank'>NF-e</a>")</td>
                 </tr>
             </table>
 
@@ -71,10 +117,10 @@
                 @foreach (var produto in produtos)
                 {
                     <tr>
-                        <td>@produto.QuantidadeProdutoCarrinho</td>
+                        <td>@produto.UnidadesPedidas</td>
                         <td>@produto.Nome</td>
                         <td>@produto.Valor.ToString("C")</td>
-                        <td>@((produto.Valor * produto.QuantidadeProdutoCarrinho).ToString("C"))</td>
+                        <td>@((produto.Valor * produto.UnidadesPedidas).ToString("C"))</td>
                     </tr>
                 }
 

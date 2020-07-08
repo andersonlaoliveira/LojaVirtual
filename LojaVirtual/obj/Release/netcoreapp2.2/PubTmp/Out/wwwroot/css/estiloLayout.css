@@ -1,0 +1,11 @@
+#subir{
+    position:fixed;
+    line-height: 5;
+    padding-right: 15px;
+	bottom:0px;
+	right:0px;
+}
+
+.topoSite {
+    height: 120px; 
+}

@@ -33,10 +33,55 @@
                             <td>@pedido.DataRegistro.ToString("dd/MM/yyyy")</td>
                             <td>@pedido.ValorTotal.ToString("C")</td>
                             <td>@pedido.FormaPagamento</td>
-                            <td>@pedido.Situacao</td>
-                            <td>@pedido.NFE</td>
                             <td>
-                                <a asp-action="Visualizar" asp-route-id="@pedido.Id">Visualizar</a>
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.PEDIDO_REALIZADO)
+                                {
+                                    <span class="label pedido-realizado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.PAGAMENTO_APROVADO)
+                                {
+                                    <span class="label pagamento-aprovado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.NF_EMITIDA)
+                                {
+                                    <span class="label nf-emitida">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.EM_TRANSPORTE)
+                                {
+                                    <span class="label em-transporte">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.ENTREGUE)
+                                {
+                                    <span class="label entregue">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.FINALIZADO)
+                                {
+                                    <span class="label finalizado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER)
+                                {
+                                    <span class="label devolver">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+                                {
+                                    <span class="label devolver-entregue">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLUCAO_ACEITA)
+                                {
+                                    <span class="label devolucao-aceita">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLUCAO_REJEITADA)
+                                {
+                                    <span class="label devolucao-rejeitada">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == LojaVirtual.Models.Contants.PedidoSituacaoConstant.DEVOLVER_ESTORNO)
+                                {
+                                    <span class="label estorno">@pedido.Situacao</span>
+                                }
+                            </td>
+                            <td>@Html.Raw(pedido.NFE == null ? "-" : "<a href='" + pedido.NFE + "' target='_blank'>NF-e</a>")</td>
+                            <td>
+                                <a asp-action="Visualizar" class="btn btn-info" asp-route-id="@pedido.Id">Visualizar</a>
                             </td>
                         </tr>
                     }

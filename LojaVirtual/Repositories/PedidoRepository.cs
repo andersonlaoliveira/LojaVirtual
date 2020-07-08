@@ -47,7 +47,7 @@ namespace LojaVirtual.Repositories
 
             int NumeroPagina = pagina ?? 1;
 
-            var query = _banco.Pedidos.Include(a => a.PedidoSituacoes).Include(b => b.Cliente).AsQueryable();
+            var query = _banco.Pedidos.Include(a => a.PedidoSituacoes).Include(a => a.Cliente).AsQueryable();
 
             if (cpf != null)
             {
@@ -71,12 +71,32 @@ namespace LojaVirtual.Repositories
 
             int NumeroPagina = pagina ?? 1;
 
-            return _banco.Pedidos.Include(a => a.PedidoSituacoes).ToPagedList<Pedido>(NumeroPagina, RegistroPorPagina);
+            return _banco.Pedidos.Include(a => a.PedidoSituacoes).Where(a => a.ClienteId == clienteId).ToPagedList<Pedido>(NumeroPagina, RegistroPorPagina);
         }
 
-        public List<Pedido> ObterTodosPedidosRealizados()
+        public List<Pedido> ObterTodosPedidosPorSituacao(string status)
         {
-            return _banco.Pedidos.Include(a => a.PedidoSituacoes).Include(a=>a.Cliente).Where(a => a.Situacao == PedidoSituacaoConstant.PEDIDO_REALIZADO).ToList();
+            return _banco.Pedidos.Include(a => a.PedidoSituacoes).Include(a => a.Cliente).Where(a => a.Situacao == status).ToList();
+        }
+
+        public int QuantidadeTotalBoletoBancario()
+        {
+            return _banco.Pedidos.Where(a => a.FormaPagamento == MetodoPagamentoConstant.Boleto).Count();
+        }
+
+        public int QuantidadeTotalCartaoCredito()
+        {
+            return _banco.Pedidos.Where(a => a.FormaPagamento == MetodoPagamentoConstant.CartaoCredito).Count();
+        }
+
+        public int QuantidadeTotalPedidos()
+        {
+            return _banco.Pedidos.Count();
+        }
+
+        public decimal ValorTotalPedidos()
+        {
+            return _banco.Pedidos.Sum(a => a.ValorTotal);
         }
     }
 }

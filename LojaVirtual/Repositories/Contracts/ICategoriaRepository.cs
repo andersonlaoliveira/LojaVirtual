@@ -1,5 +1,4 @@
-﻿using LojaVirtual.Migrations;
-using LojaVirtual.Models;
+﻿using LojaVirtual.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +15,14 @@ namespace LojaVirtual.Repositories.Contracts
         void Excluir(int Id);
         Categoria ObterCategoria(int Id);
         Categoria ObterCategoria(string Slug);
+
+        Categoria ObterCategoriaPorNome(string Nome);
+
         IEnumerable<Categoria> ObterCategoriasRecursiva(Categoria categoriaPai);
         IPagedList<Categoria> ObterTodosOsCategorias(int? pagina);
 
         IEnumerable<Categoria> ObterTodosOsCategorias();
+
+        List<Categoria> ObterCategoriasPorCategoriaPai(int id);
     }
 }

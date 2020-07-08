@@ -170,6 +170,29 @@ namespace LojaVirtual.Migrations
                     b.ToTable("Imagens");
                 });
 
+            modelBuilder.Entity("LojaVirtual.Models.Logs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Exception");
+
+                    b.Property<string>("Level");
+
+                    b.Property<string>("Message");
+
+                    b.Property<string>("MessageTemplate");
+
+                    b.Property<string>("Properties");
+
+                    b.Property<DateTime>("TimeStamp");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logs");
+                });
+
             modelBuilder.Entity("LojaVirtual.Models.NewsletterEmail", b =>
                 {
                     b.Property<int>("Id")
@@ -255,6 +278,13 @@ namespace LojaVirtual.Migrations
                     b.Property<string>("Descricao")
                         .IsRequired();
 
+                    b.Property<string>("DescricaoInterna");
+
+                    b.Property<string>("EspecificacoTecnica")
+                        .IsRequired();
+
+                    b.Property<int>("Estoque");
+
                     b.Property<int>("Largura");
 
                     b.Property<string>("Nome")
@@ -262,9 +292,14 @@ namespace LojaVirtual.Migrations
 
                     b.Property<double>("Peso");
 
-                    b.Property<int>("Quantidade");
+                    b.Property<string>("Slug")
+                        .IsRequired();
 
                     b.Property<decimal>("Valor");
+
+                    b.Property<decimal>("ValorCusto");
+
+                    b.Property<decimal>("ValorVenda");
 
                     b.HasKey("Id");
 
@@ -297,7 +332,7 @@ namespace LojaVirtual.Migrations
 
             modelBuilder.Entity("LojaVirtual.Models.Pedido", b =>
                 {
-                    b.HasOne("LojaVirtual.Models.Cliente")
+                    b.HasOne("LojaVirtual.Models.Cliente", "Cliente")
                         .WithMany("Pedidos")
                         .HasForeignKey("ClienteId");
                 });
@@ -305,7 +340,7 @@ namespace LojaVirtual.Migrations
             modelBuilder.Entity("LojaVirtual.Models.PedidoSituacao", b =>
                 {
                     b.HasOne("LojaVirtual.Models.Pedido", "Pedido")
-                        .WithMany("PedidoSituacaos")
+                        .WithMany("PedidoSituacoes")
                         .HasForeignKey("PedidoId");
                 });
 

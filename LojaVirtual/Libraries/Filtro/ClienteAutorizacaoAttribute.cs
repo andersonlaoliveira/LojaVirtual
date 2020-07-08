@@ -26,7 +26,6 @@ namespace LojaVirtual.Libraries.Filtro
             Cliente cliente = _loginCliente.GetCliente();
             if (cliente == null)
             {
-                //TODO - Implementar página html bonita para acesso negado/Erro4XX/Erro5XX
                 context.Result = new ContentResult() { Content = "Acesso negado." };
             }
         }

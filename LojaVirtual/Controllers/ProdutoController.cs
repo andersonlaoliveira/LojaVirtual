@@ -29,10 +29,9 @@ namespace LojaVirtual.Controllers
 
         
         [HttpGet]
-        public ActionResult Visualizar(int id)
+        public ActionResult Visualizar(string slug)
         {
-            //TODO - Obter o produto
-            return View(_produtoRepository.ObterProduto(id));
+            return View(_produtoRepository.ObterProduto(slug));
         }
         
     }

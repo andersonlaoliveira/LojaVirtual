@@ -81,14 +81,24 @@ namespace LojaVirtual.Repositories
         public IPagedList<Categoria> ObterTodosOsCategorias(int? pagina)
         {
             int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
-            
+
             int NumeroPagina = pagina ?? 1;
-            return _banco.Categorias.ToPagedList<Categoria>(NumeroPagina, RegistroPorPagina);
+            return _banco.Categorias.Include(a => a.CategoriaPai).ToPagedList<Categoria>(NumeroPagina, RegistroPorPagina);
         }
 
         public IEnumerable<Categoria> ObterTodosOsCategorias()
         {
             return _banco.Categorias;
+        }
+
+        public Categoria ObterCategoriaPorNome(string Nome)
+        {
+            return _banco.Categorias.Where(a => a.Nome == Nome).FirstOrDefault();
+        }
+
+        public List<Categoria> ObterCategoriasPorCategoriaPai(int id)
+        {
+            return _banco.Categorias.Where(a => a.CategoriaPaiId == id).ToList();
         }
     }
 }

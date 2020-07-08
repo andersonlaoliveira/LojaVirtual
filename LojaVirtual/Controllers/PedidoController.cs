@@ -29,7 +29,6 @@ namespace LojaVirtual.Controllers
 
             if (pedido.ClienteId != _loginCliente.GetCliente().Id)
             {
-                //TODO - Implementar página HTML bonita para acesso negado/ERRO4XX/ERRO5XX
                 return new ContentResult() { Content = "Acesso negado. Cliente não autorizada para este pedido." };
             }
 

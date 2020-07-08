@@ -48,7 +48,6 @@ namespace LojaVirtual.Libraries.AutoMapper
             CreateMap<TransactionProduto, PedidoSituacao>()
                 .ForMember(dest => dest.Dados, opt => opt.MapFrom(orig => JsonConvert.SerializeObject(orig, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>(), ReferenceLoopHandling = ReferenceLoopHandling.Ignore })));
 
-            /*
             CreateMap<DadosCancelamentoBoleto, BankAccount>()
                 .ForMember(dest => dest.BankCode, opt => opt.MapFrom(orig => orig.BancoCodigo))
                 .ForMember(dest => dest.Agencia, opt => opt.MapFrom(orig => orig.Agencia))
@@ -57,7 +56,6 @@ namespace LojaVirtual.Libraries.AutoMapper
                 .ForMember(dest => dest.ContaDv, opt => opt.MapFrom(orig => orig.ContaDV))
                 .ForMember(dest => dest.LegalName, opt => opt.MapFrom(orig => orig.Nome))
                 .ForMember(dest => dest.DocumentNumber, opt => opt.MapFrom(orig => orig.CPF));
-                */
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using LojaVirtual.Database;
+using LojaVirtual.Libraries.Json.Resolver;
 using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +36,19 @@ namespace LojaVirtual.Repositories
             _banco.SaveChanges();
         }
 
+        public void DevolverProdutosEstoque(Pedido pedido)
+        {
+            List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos, new JsonSerializerSettings() { ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>() });
+
+            foreach (var produto in produtos)
+            {
+                Produto produtoDB = ObterProduto(produto.Id);
+                produtoDB.Estoque += produto.UnidadesPedidas;
+
+                Atualizar(produtoDB);
+            }
+        }
+
         public void Excluir(int Id)
         {
             Produto produto = ObterProduto(Id);
@@ -44,6 +59,21 @@ namespace LojaVirtual.Repositories
         public Produto ObterProduto(int Id)
         {
             return _banco.Produtos.Include(a=>a.Imagens).OrderBy(a=>a.Nome).Where(a=>a.Id == Id).FirstOrDefault();
+        }
+
+        public Produto ObterProduto(string slug)
+        {
+            return _banco.Produtos.Include(a => a.Imagens).OrderBy(a => a.Nome).Where(a => a.Slug == slug).FirstOrDefault();
+        }
+
+        public List<Produto> ObterProdutoPorCategoria(int id)
+        {
+            return _banco.Produtos.OrderBy(a => a.Nome).Where(a => a.CategoriaId == id).ToList();
+        }
+
+        public Produto ObterProdutoSlug(string Slug)
+        {
+            return _banco.Produtos.Where(a => a.Slug == Slug).FirstOrDefault();
         }
 
         public IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa)
@@ -87,5 +117,13 @@ namespace LojaVirtual.Repositories
 
             return bancoProduto.Include(a => a.Imagens).ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
         }
+
+        public int QuantidadeTotalProdutos()
+        {
+            return _banco.Produtos.Count();
+        }
+
+
+
     }
 }

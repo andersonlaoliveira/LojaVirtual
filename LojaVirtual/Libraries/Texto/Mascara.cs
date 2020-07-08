@@ -35,6 +35,7 @@ namespace LojaVirtual.Libraries.Texto
 
             return dec;
         }
+
         public static int ExtrairCodigoPedido(string codigoPedido, out string transactionId)
         {
             string[] resultadoSeparacao = codigoPedido.Split("-");

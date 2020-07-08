@@ -4,17 +4,17 @@
     var codigoPedido = Context.Request.Query["codigoPedido"];
     var cpf = Context.Request.Query["cpf"];
 }
+<h1><i class="fas fa-cart-arrow-down"></i> Pedidos</h1>
+<br />
 
-<br />
-<br />
 <div class="container">
 
     <form method="get" class="form-inline">
 
-        <label for="numeroPedido">Nº pedido</label>
+        <label for="numeroPedido">Nº pedido:&nbsp;</label>
         <input type="text" name="codigoPedido" class="form-control" value="@codigoPedido" id="numeroPedido">
-
-        <label for="cpf">CPF</label>
+        &nbsp;&nbsp;
+        <label for="cpf">CPF: &nbsp;</label>
         <input type="text" name="cpf" class="form-control" value="@cpf" id="cpf">
 
         <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -32,10 +32,7 @@
                         <th scope="col">Nº Pedido</th>
                         <th scope="col">Cliente</th>
                         <th scope="col">Data compra</th>
-                        <th scope="col">Valor</th>
-                        <th scope="col">Forma pagamento</th>
                         <th scope="col">Situação</th>
-                        <th scope="col">NF-e</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -44,14 +41,56 @@
                     {
                         <tr>
                             <td>@pedido.Id-@pedido.TransactionId</td>
-                            <td>@pedido.Cliente.Nome  - @pedido.Cliente.CPF</td>
+                            <td>@pedido.ClienteId - @pedido.Cliente.Nome</td>
                             <td>@pedido.DataRegistro.ToString("dd/MM/yyyy")</td>
-                            <td>@pedido.ValorTotal.ToString("C")</td>
-                            <td>@pedido.FormaPagamento</td>
-                            <td>@pedido.Situacao</td>
-                            <td>@pedido.NFE</td>
                             <td>
-                                <a asp-action="Visualizar" asp-route-id="@pedido.Id">Visualizar</a>
+                                @if (pedido.Situacao == PedidoSituacaoConstant.PEDIDO_REALIZADO)
+                                {
+                                    <span class="label pedido-realizado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
+                                {
+                                    <span class="label pagamento-aprovado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.NF_EMITIDA)
+                                {
+                                    <span class="label nf-emitida">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.EM_TRANSPORTE)
+                                {
+                                    <span class="label em-transporte">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.ENTREGUE)
+                                {
+                                    <span class="label entregue">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.FINALIZADO)
+                                {
+                                    <span class="label finalizado">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER)
+                                {
+                                    <span class="label devolver">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+                                {
+                                    <span class="label devolver-entregue">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.DEVOLUCAO_ACEITA)
+                                {
+                                    <span class="label devolucao-aceita">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.DEVOLUCAO_REJEITADA)
+                                {
+                                    <span class="label devolucao-rejeitada">@pedido.Situacao</span>
+                                }
+                                @if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ESTORNO)
+                                {
+                                    <span class="label estorno">@pedido.Situacao</span>
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="Visualizar" class="btn btn-info" asp-route-id="@pedido.Id">Visualizar</a>
                             </td>
                         </tr>
                     }

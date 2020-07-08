@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,9 @@ namespace LojaVirtual.Models
     public class Pedido
     {
         //PK
+        //[Key, Column(Order = 10100)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [ForeignKey("Cliente")]
@@ -34,7 +38,5 @@ namespace LojaVirtual.Models
 
         [ForeignKey("PedidoId")]
         public virtual ICollection<PedidoSituacao> PedidoSituacoes { get; set; }
-
-        //TODO - FK - Pedido -> Historicos Situacao.
     }
 }

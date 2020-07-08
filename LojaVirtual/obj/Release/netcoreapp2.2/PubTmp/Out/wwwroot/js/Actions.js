@@ -8,10 +8,28 @@
     });
     $('.dinheiro').mask('000.000.000.000.000,00', { reverse: true });
 
-    AjaxUploadImagemProduto();
+    AJAXUploadImagemProduto();
+    CategoriaSlug();
+    ProdutoSlug();
 });
 
-function AjaxUploadImagemProduto() {
+function CategoriaSlug() {
+    if ($("#form-categoria").length > 0) {
+        $("input[name=Nome]").keyup(function () {
+            $("input[name=Slug]").val(convertToSlug($(this).val()));
+        });
+    }
+}
+
+function ProdutoSlug() {
+    if ($("#form-produtos").length > 0) {
+        $("input[name=Nome]").keyup(function () {
+            $("input[name=Slug]").val(convertToSlug($(this).val()));
+        });
+    }
+}
+
+function AJAXUploadImagemProduto() {
     $(".img-upload").click(function () {
         $(this).parent().parent().find(".input-file").click();
     });
@@ -42,16 +60,13 @@ function AjaxUploadImagemProduto() {
         var Formulario = new FormData();
         Formulario.append("file", Binario);
 
-
         var CampoHidden = $(this).parent().find("input[name=imagem]");
         var Imagem = $(this).parent().find(".img-upload");
         var BtnExcluir = $(this).parent().find(".btn-imagem-excluir");
 
-        //Apresenta imagem loading
         Imagem.attr("src", "/img/loading.gif");
         Imagem.addClass("thumb");
 
-        //TODO - Requisição Ajax enviado a Formulario
         $.ajax({
             type: "POST",
             url: "/Colaborador/Imagem/Armazenar",
@@ -72,4 +87,14 @@ function AjaxUploadImagemProduto() {
             }
         });
     });
+}
+
+
+
+
+function convertToSlug(Text) {
+    return Text
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '')
 }

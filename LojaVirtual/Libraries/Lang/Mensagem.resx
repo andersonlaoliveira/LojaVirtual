@@ -147,6 +147,27 @@
   <data name="MSG_E010" xml:space="preserve">
     <value>Não foi selecionado produtos para compra!</value>
   </data>
+  <data name="MSG_E011" xml:space="preserve">
+    <value>O valor do campo {0} já existe na base de dados</value>
+  </data>
+  <data name="MSG_E012" xml:space="preserve">
+    <value>Não é possivel excluir categorias que possuem categorias vinculadas: {0}</value>
+  </data>
+  <data name="MSG_E013" xml:space="preserve">
+    <value>Não é possivel excluir categorias que possuem produtos vinculados: {0}</value>
+  </data>
+  <data name="MSG_E014" xml:space="preserve">
+    <value>E-mail não encontrado na base de dados</value>
+  </data>
+  <data name="MSG_E015" xml:space="preserve">
+    <value>Link de alteração inválido</value>
+  </data>
+  <data name="MSG_E016" xml:space="preserve">
+    <value>Usuário não encontrado, verifique o e-mail e/ou senha digitado!</value>
+  </data>
+  <data name="MSG_E017" xml:space="preserve">
+    <value>Usuário desativado, entre em contato com nossa equipe.</value>
+  </data>
   <data name="MSG_S001" xml:space="preserve">
     <value>Registro salvo com sucesso.</value>
   </data>
@@ -155,5 +176,11 @@
   </data>
   <data name="MSG_S003" xml:space="preserve">
     <value>Senha enviada com sucesso</value>
+  </data>
+  <data name="MSG_S004" xml:space="preserve">
+    <value>E-mail enviado com sucesso.</value>
+  </data>
+  <data name="MSG_S005" xml:space="preserve">
+    <value>Senha alterada com sucesso.</value>
   </data>
 </root>

@@ -24,6 +24,7 @@ using Newtonsoft.Json;
 using PagarMe;
 using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.Email;
+using Microsoft.Extensions.Logging;
 
 namespace LojaVirtual.Controllers
 {
@@ -36,8 +37,10 @@ namespace LojaVirtual.Controllers
         private IPedidoRepository _pedidoRepository;
         private IPedidoSituacaoRepository _pedidoSituacaRepository;
         private GerenciarEmail _gerenciarEmail;
+        private ILogger<PagamentoController> _logger;
 
         public PagamentoController(
+            ILogger<PagamentoController> logger,
             GerenciarEmail gerenciarEmail,
             IPedidoRepository pedidoRepository,
             IPedidoSituacaoRepository pedidoSituacaRepository,
@@ -66,6 +69,7 @@ namespace LojaVirtual.Controllers
             _pedidoSituacaRepository = pedidoSituacaRepository;
             _cookie = cookie;
             _gerenciarPagarMe = gerenciarPagarMe;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -100,6 +104,7 @@ namespace LojaVirtual.Controllers
                 }
                 catch (PagarMeException e)
                 {
+                    _logger.LogError(e, "PagamentoController > Index");
                     TempData["MSG_E"] = MontarMensagensDeErro(e);
 
                     return Index();
@@ -128,6 +133,7 @@ namespace LojaVirtual.Controllers
             }
             catch (PagarMeException e)
             {
+                _logger.LogError(e, "PagamentoController > BoletoBancario");
                 TempData["MSG_E"] = MontarMensagensDeErro(e);
                 return RedirectToAction(nameof(Index));
             }
@@ -156,7 +162,7 @@ namespace LojaVirtual.Controllers
             foreach (var produto in produtos)
             {
                 Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
-                produtoDB.Quantidade -= produto.QuantidadeProdutoCarrinho;
+                produtoDB.Estoque -= produto.UnidadesPedidas;
 
                 _produtoRepository.Atualizar(produtoDB);
             }
@@ -201,6 +207,7 @@ namespace LojaVirtual.Controllers
             else
             {
                 var endereco = _enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
+                enderecoEntrega = endereco;
             }
 
             return enderecoEntrega;
@@ -227,7 +234,7 @@ namespace LojaVirtual.Controllers
 
             foreach (var produto in produtos)
             {
-                total += produto.Valor * produto.QuantidadeProdutoCarrinho;
+                total += produto.Valor * produto.UnidadesPedidas;
             }
 
             return total;

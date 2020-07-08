@@ -1,7 +1,6 @@
 ﻿@model LojaVirtual.Models.Cliente
 @{
     ViewData["Title"] = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <main role="main">
     <br />
@@ -24,7 +23,7 @@
                                 <input asp-for="Email" class="form-control" placeholder="Email" type="email">
                             </div>
                             <div class="form-group">
-                                <a class="float-right" href="#">Esqueceu?</a>
+                                <a class="float-right" asp-action="Recuperar" asp-controller="Home">Esqueceu?</a>
                                 <label>Senha</label>
                                 <input asp-for="Senha" class="form-control" placeholder="******" type="password">
                             </div>

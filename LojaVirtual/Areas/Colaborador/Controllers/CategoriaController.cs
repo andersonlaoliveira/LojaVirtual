@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Lang;
@@ -18,9 +19,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
     public class CategoriaController : Controller
     {
         private ICategoriaRepository _categoriaRepository;
-        public CategoriaController(ICategoriaRepository categoriaRepository)
+        private IProdutoRepository _produtoRepository;
+
+        public CategoriaController(ICategoriaRepository categoriaRepository, IProdutoRepository produtoRepository)
         {
             _categoriaRepository = categoriaRepository;
+            _produtoRepository = produtoRepository;
         }
 
         public IActionResult Index(int? pagina)
@@ -81,13 +85,46 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
         [HttpGet]
         [ValidadeHttpReferer]
-        public IActionResult Excluir(int Id)
+        public IActionResult Excluir(int id)
         {
-            _categoriaRepository.Excluir(Id);
+
+
+            var categoriasFilho = _categoriaRepository.ObterCategoriasPorCategoriaPai(id);
+            if (categoriasFilho.Count > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var item in categoriasFilho)
+                {
+                    sb.Append($"'{item.Nome}' ");
+                }
+
+                TempData["MSG_E"] = string.Format(Mensagem.MSG_E012, sb.ToString());
+                return RedirectToAction(nameof(Index));
+            }
+
+            var produtosFilho = _produtoRepository.ObterProdutoPorCategoria(id);
+
+            if (produtosFilho.Count > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var item in produtosFilho)
+                {
+                    sb.Append($"'{item.Nome}' ");
+                }
+
+                TempData["MSG_E"] = string.Format(Mensagem.MSG_E013, sb.ToString());
+                return RedirectToAction(nameof(Index));
+            }
+
+            _categoriaRepository.Excluir(id);
             TempData["MSG_S"] = Mensagem.MSG_S002;
             return RedirectToAction(nameof(Index));
+
+
+
         }
 
-        
     }
 }

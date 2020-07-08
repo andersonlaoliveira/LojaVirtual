@@ -16,8 +16,16 @@ namespace LojaVirtual.Repositories.Contracts
         void Atualizar(Produto produto);
         void Excluir(int Id);
 
+        void DevolverProdutosEstoque(Pedido pedido);
+
         Produto ObterProduto(int Id);
+        Produto ObterProduto(string slug);
         IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa);
         IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa, string ordenacao, IEnumerable<Categoria> categorias);
+        int QuantidadeTotalProdutos();
+
+        List<Produto> ObterProdutoPorCategoria(int id);
+
+        Produto ObterProdutoSlug(string Slug);
     }
 }

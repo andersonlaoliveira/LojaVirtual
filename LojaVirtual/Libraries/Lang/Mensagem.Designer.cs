@@ -151,6 +151,69 @@ namespace LojaVirtual.Libraries.Lang {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O valor do campo {0} já existe na base de dados.
+        /// </summary>
+        public static string MSG_E011 {
+            get {
+                return ResourceManager.GetString("MSG_E011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possivel excluir categorias que possuem categorias vinculadas: {0}.
+        /// </summary>
+        public static string MSG_E012 {
+            get {
+                return ResourceManager.GetString("MSG_E012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possivel excluir categorias que possuem produtos vinculados: {0}.
+        /// </summary>
+        public static string MSG_E013 {
+            get {
+                return ResourceManager.GetString("MSG_E013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mail não encontrado na base de dados.
+        /// </summary>
+        public static string MSG_E014 {
+            get {
+                return ResourceManager.GetString("MSG_E014", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Link de alteração inválido.
+        /// </summary>
+        public static string MSG_E015 {
+            get {
+                return ResourceManager.GetString("MSG_E015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário não encontrado, verifique o e-mail e/ou senha digitado!.
+        /// </summary>
+        public static string MSG_E016 {
+            get {
+                return ResourceManager.GetString("MSG_E016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário desativado, entre em contato com nossa equipe..
+        /// </summary>
+        public static string MSG_E017 {
+            get {
+                return ResourceManager.GetString("MSG_E017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registro salvo com sucesso..
         /// </summary>
         public static string MSG_S001 {
@@ -174,6 +237,24 @@ namespace LojaVirtual.Libraries.Lang {
         public static string MSG_S003 {
             get {
                 return ResourceManager.GetString("MSG_S003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mail enviado com sucesso..
+        /// </summary>
+        public static string MSG_S004 {
+            get {
+                return ResourceManager.GetString("MSG_S004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Senha alterada com sucesso..
+        /// </summary>
+        public static string MSG_S005 {
+            get {
+                return ResourceManager.GetString("MSG_S005", resourceCulture);
             }
         }
     }

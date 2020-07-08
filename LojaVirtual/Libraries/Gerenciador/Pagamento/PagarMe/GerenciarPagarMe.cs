@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Models;
@@ -15,12 +16,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
     public class GerenciarPagarMe
     {
         private IConfiguration _configuration;
+        private IMapper _mapper;
         private LoginCliente _loginCliente;
 
-        public GerenciarPagarMe(IConfiguration configuration, LoginCliente loginCliente)
+        public GerenciarPagarMe(IConfiguration configuration, LoginCliente loginCliente, IMapper mapper)
         {
             _configuration = configuration;
             _loginCliente = loginCliente;
+            _mapper = mapper;
         }
 
         public Transaction GerarBoleto(decimal valor, List<ProdutoItem> produtos, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete)
@@ -88,7 +91,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
                 {
                     Id = item.Id.ToString(),
                     Title = item.Nome,
-                    Quantity = item.QuantidadeProdutoCarrinho,
+                    Quantity = item.UnidadesPedidas,
                     Tangible = true,
                     UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
                 };
@@ -124,7 +127,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
             Transaction transaction = new Transaction();
             transaction.PaymentMethod = PaymentMethod.CreditCard;
             /*
-             * TODO - transaction.postbackurl
+             * TODO - transaction.postbackurl - (Verificar no futuro)
              * - Parâmetro importante para que seu site seja informado sobre todas as mudanças de status ocorridas no Pagar.Me.
              * URL 1: https://pagarme.zendesk.com/hc/pt-br/articles/205973476-Quando-o-POSTback-%C3%A9-enviado-
              * URL 2: https://docs.pagar.me/v1/reference#criar-transacao
@@ -201,7 +204,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
                 {
                     Id = item.Id.ToString(),
                     Title = item.Nome,
-                    Quantity = item.QuantidadeProdutoCarrinho,
+                    Quantity = item.UnidadesPedidas,
                     Tangible = true,
                     UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
                 };
@@ -257,14 +260,35 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe
             return lista;
         }
 
-
         public Transaction ObterTransacao(string transactionId)
         {
             PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
 
             return PagarMeService.GetDefaultService().Transactions.Find(transactionId);
         }
+        public Transaction EstornoCartaoCredito(string transactionId)
+        {
+            PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
 
+            var transaction = PagarMeService.GetDefaultService().Transactions.Find(transactionId);
+
+            transaction.Refund();
+
+            return transaction;
+        }
+
+
+        public Transaction EstornoBoletoBancario(string transactionId, DadosCancelamentoBoleto boletoBancario)
+        {
+            PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
+
+            var transaction = PagarMeService.GetDefaultService().Transactions.Find(transactionId);
+            var bankAccount = _mapper.Map<DadosCancelamentoBoleto, BankAccount>(boletoBancario);
+
+            transaction.Refund(bankAccount);
+
+            return transaction;
+        }
     }
 
 }

@@ -16,7 +16,9 @@ namespace LojaVirtual.Repositories.Contracts
         void Atualizar(Cliente cliente);
         void Excluir(int Id);
         Cliente ObterCliente(int Id);
+        Cliente ObterClientePorEmail(string email);
         IPagedList<Cliente> ObterTodosOsClientes(int? pagina, string pesquisa);
+        int QuantidadeTotalClientes();
 
     }
 }

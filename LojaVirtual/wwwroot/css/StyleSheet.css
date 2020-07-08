@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
 }
 
 .field-validation-error {
@@ -137,7 +137,6 @@
 
 .btn-continuar, .btn-continuar-comprando {
     width: 100%;
-    min-height: 70px;
     font-size: 36px;
 }
 
@@ -239,4 +238,132 @@
         top: 30%;
         transition: all 200ms ease-in;
     }
+}
+
+
+
+.li.complete-red .status {
+    border-top: 2px solid red;
+}
+
+    .li.complete-red .status:before {
+        background-color: red;
+        border: none;
+        transition: all 200ms ease-in;
+    }
+
+    .li.complete-red .status h4 {
+        color: red;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.price-wrap {
+    text-align: center;
+}
+
+.price-new-promo {
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.parcelamento {
+    font-size: 0.875em;
+    text-align: center;
+    color: dimgray;
+    width: 100%;
+}
+
+.border-cliente {
+    border-color: #007bff !important;
+}
+
+.text-cliente {
+    color: #007bff !important;
+}
+
+.border-newsletter {
+    border-color: #28a745 !important;
+}
+
+.text-newsletter {
+    color: #28a745 !important;
+}
+
+.desconto {
+    top: 9px;
+    left: 8px;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    padding: 2px 7px;
+    font-size: 12px;
+    background-color: #727272;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-produto {
+    width: 100%;
+}
+
+.label {
+    color: white;
+    padding: 8px;
+}
+
+.pedido-realizado {
+    background-color: #4CAF50;
+}
+
+.pagamento-aprovado {
+    background-color: #ffb6c1;
+}
+
+.nf-emitida {
+    background-color: #f98d60;
+}
+
+.em-transporte {
+    background-color: #fde910;
+}
+
+.entregue {
+    background-color: #3cb371;
+}
+
+.finalizado {
+    background-color: #32cd32;
+}
+
+.devolver {
+    background-color: #3d2b1f;
+}
+
+.devolver-entregue {
+    background-color: #312219;
+}
+
+.devolucao-aceita {
+    background-color: #94b5c9;
+}
+
+.devolucao-rejeitada {
+    background-color: #00cfff;
+}
+
+.estorno {
+    background-color: #ff4500;
 }

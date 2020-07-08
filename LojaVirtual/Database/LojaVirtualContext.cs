@@ -17,7 +17,7 @@ namespace LojaVirtual.Database
          */
         public LojaVirtualContext(DbContextOptions<LojaVirtualContext> options) : base(options)
         {
-
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
         public DbSet<Cliente> Clientes { get; set; }
@@ -31,6 +31,7 @@ namespace LojaVirtual.Database
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Imagem> Imagens { get; set; }
+        public DbSet<Logs> Logs { get; set; }
 
     }
 }

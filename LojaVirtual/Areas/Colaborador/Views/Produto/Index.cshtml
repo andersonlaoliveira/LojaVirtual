@@ -1,25 +1,24 @@
 ﻿@model X.PagedList.IPagedList<LojaVirtual.Models.ProdutoAgregador.Produto>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Produtos";
     var pesquisa = Context.Request.Query["pesquisa"];
 }
 
-<h1>Produto</h1>
+<h1><i class="fas fa-box-open"></i> Produtos</h1>
 
-<!-- Formulário -->
+<br />
 <form method="get">
     <div class="form-group">
         <label for="pesquisa"></label>
-        <input type="text" name="pesquisa" value="@pesquisa" id="pesquisa" class="form-control" placeholder="Digite o nome do produto">
+        <input type="text" name="pesquisa" id="pesquisa" value="@pesquisa" class="form-control" placeholder="Digite o nome do produto">
     </div>
-    <button type="submit" class="btn btn-primary">Pesquisar</button>
+    <button type="submit" class="btn btn-info">Pesquisar</button> <a asp-action="Cadastrar" class="btn btn-primary">Cadastrar</a>
 </form>
 <br />
 <br />
 
 @{ await Html.RenderPartialAsync("~/Views/Shared/_Mensagem.cshtml"); }
 
-<a asp-action="Cadastrar" class="btn btn-primary">Cadastrar</a>
 
 
 @if (Model.Count > 0)

@@ -16,12 +16,15 @@ using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Filtro;
 using Newtonsoft.Json;
 using LojaVirtual.Libraries.Seguranca;
+using Microsoft.Extensions.Logging;
 
 namespace LojaVirtual.Controllers
 {
     public class CarrinhoCompraController : BaseController
     {
+        private ILogger _logger;
         public CarrinhoCompraController(
+            ILogger<CarrinhoCompraController> logger,
             LoginCliente loginCliente,
             CookieCarrinhoCompra carrinhoCompra,
             IEnderecoEntregaRepository enderecoEntregaRepository,
@@ -38,8 +41,9 @@ namespace LojaVirtual.Controllers
                   mapper,
                   wscorreios,
                   calcularPacote,
-                  cookieValorPrazoFrete)
-        { }
+                  cookieValorPrazoFrete
+            )
+        { _logger = logger; }
 
         public IActionResult Index()
         {
@@ -48,7 +52,25 @@ namespace LojaVirtual.Controllers
             return View(produtoItemCompleto);
         }
 
+        public IActionResult VerificarEstoque()
+        {
+            List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
 
+            foreach (var produto in produtoItemCompleto)
+            {
+                if (produto.Estoque <= 0)
+                {
+                    ViewBag.MSG_E = Mensagem.MSG_E008;
+                    return View("Index", produtoItemCompleto);
+                }
+                if (produto.Estoque < produto.UnidadesPedidas)
+                {
+                    ViewBag.MSG_E = Mensagem.MSG_E008;
+                    return View("Index", produtoItemCompleto);
+                }
+            }
+            return RedirectToAction(nameof(EnderecoEntrega));
+        }
         //Item ID = ID Produto
         public IActionResult AdicionarItem(int id)
         {
@@ -60,7 +82,7 @@ namespace LojaVirtual.Controllers
             }
             else
             {
-                var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = 1 };
+                var item = new ProdutoItem() { Id = id, UnidadesPedidas = 1 };
                 _cookieCarrinhoCompra.Cadastrar(item);
 
                 return RedirectToAction(nameof(Index));
@@ -73,13 +95,13 @@ namespace LojaVirtual.Controllers
             {
                 return BadRequest(new { mensagem = Mensagem.MSG_E007 });
             }
-            else if (quantidade > produto.Quantidade)
+            else if (quantidade > produto.Estoque)
             {
                 return BadRequest(new { mensagem = Mensagem.MSG_E008 });
             }
             else
             {
-                var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade };
+                var item = new ProdutoItem() { Id = id, UnidadesPedidas = quantidade };
                 _cookieCarrinhoCompra.Atualizar(item);
                 return Ok(new { mensagem = Mensagem.MSG_S001 });
             }
@@ -143,6 +165,7 @@ namespace LojaVirtual.Controllers
             }
             catch (Exception e)
             {
+                _logger.LogError(e, "CarrinhoCompraControler > CalcularFrete");
                 return BadRequest(e);
             }
         }

@@ -11,6 +11,7 @@
                         <article class="gallery-wrap">
                             <div class="img-big-wrap">
                                 <div>
+
                                     @if (Model.Imagens != null && Model.Imagens.Count > 0)
                                     {
                                         <a href="@Model.Imagens.ElementAt(0).Caminho" data-fancybox><img src="@Model.Imagens.ElementAt(0).Caminho"></a>
@@ -64,7 +65,7 @@
                                 <dd class="col-sm-9">@Model.Altura</dd>
 
                                 <dt class="col-sm-3">Estoque</dt>
-                                <dd class="col-sm-9">@Model.Quantidade</dd>
+                                <dd class="col-sm-9">@Model.Estoque</dd>
                                 @{
                                     /* REALIZAR A CORREÇÃO NESTE ITEM
                                      * AQUI FICA A COLUNA DO DETALHE DO PRODUTO (COR E TAMANHO)
@@ -104,7 +105,7 @@
                             <div class="row">
                                 <div class="col-sm-5">
                                     <dl class="dlist-inline">
-                                        @{ 
+                                        @{
                                             /* AQUI FICAVA A QUANTIDADE QUE REMOVEMOS - AULA 226
                                         <dt>Quantity: </dt>
                                         <dd>
@@ -146,8 +147,28 @@
                             <a asp-controller="CarrinhoCompra" asp-action="AdicionarItem" asp-route-id="@Model.Id" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho </a>
                         </article> <!-- card-body.// -->
                     </aside> <!-- col.// -->
-                </div> <!-- row.// -->
-            </div> <!-- card.// -->
-        </div> <!-- code-wrap.// -->
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="row">
+                <div class="col-md-12">
+                    <article class="box">
+                        <figure class="itemside">
+                            <div class="aside align-self-center">
+                            </div>
+                            <figcaption class="text-wrap">
+                                <h5 class="title">Especificações do Produto</h5>
+                                <p class="text-muted">
+                                    @Model.EspecificacoTecnica
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+
+        </div>
     </section>
 </div>

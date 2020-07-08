@@ -29,6 +29,7 @@ using LojaVirtual.Libraries.Gerenciador.Pagamento.PagarMe;
 using LojaVirtual.Libraries.Email;
 using Coravel;
 using LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable;
+using System.ServiceModel;
 
 namespace LojaVirtual
 {
@@ -44,6 +45,12 @@ namespace LojaVirtual
 
         public void ConfigureServices(IServiceCollection services)
         {
+            /*
+             * API - Loggin
+             */
+
+            services.AddLogging();
+
             /*
              * AutoMapper
              */
@@ -82,6 +89,8 @@ namespace LojaVirtual
             });
             services.AddScoped<CalcPrecoPrazoWSSoap>(options => {
                 var servico = new CalcPrecoPrazoWSSoapClient(CalcPrecoPrazoWSSoapClient.EndpointConfiguration.CalcPrecoPrazoWSSoap);
+                ((IContextChannel)servico.InnerChannel).OperationTimeout = new TimeSpan(0, 30, 0);
+
                 return servico;
             });
             services.AddScoped<GerenciarEmail>();
@@ -122,17 +131,17 @@ namespace LojaVirtual
                 options.Cookie.IsEssential = true;
             });
 
-            /* 
-               ******************** CONEXÃO COM O BANCO DE DADOS ********************
-            */
-
             /* USO DO SQL SERVER LOCAL*/
             //string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LojaVirtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string connection = Configuration.GetValue<String>("BancoDados:Connection");
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
 
-            /* USO DO SQL SERVER HOSPEDAGEM
+            /* USO DO SQL SERVER HOSPEDAGEM DA LOJAVIRTUAL
             string connectionHost = "Server=apolo.hostsrv.org;Database=trayclou_;User Id=lojavirtual;Password=l0j@v!rtu@l2020;";
+            services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connectionHost));*/
+
+            /* USO DO SQL SERVER HOSPEDAGEM DA PITIQUICOS
+            string connectionHost = "Server=apolo.hostsrv.org;Database=pitiquicos;User Id=pitiquicos;Password=l0j@v!rtu@l2020;";
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connectionHost));*/
 
 
@@ -141,10 +150,11 @@ namespace LojaVirtual
             services.AddDbContext<LojaVirtualContext>(options => options.UseMySql(connectionMysql)); */
 
 
-            /* 
-               ******************** CORAVEL ********************
-            */
+            /*********************** CORAVEL ***********************/
             services.AddTransient<PedidoPagamentoSituacaoJob>();
+            services.AddTransient<PedidoEntregueJob>();
+            services.AddTransient<PedidoFinalizadoJob>();
+            services.AddTransient<PedidoDevolverEntregueJob>();
             services.AddScheduler();
         }
 
@@ -208,12 +218,14 @@ namespace LojaVirtual
                     name: "default",
                     template: "/{controller=Home}/{action=Index}/{id?}");
             });
-
-            /* 
-               ******************** CORAVEL ********************
-            */
+            /*
+             Scheduler - Coravel
+             */
             app.ApplicationServices.UseScheduler(scheduler => {
                 scheduler.Schedule<PedidoPagamentoSituacaoJob>().EveryTenSeconds();
+                scheduler.Schedule<PedidoEntregueJob>().EveryTenSeconds();
+                scheduler.Schedule<PedidoFinalizadoJob>().EveryTenSeconds();
+                scheduler.Schedule<PedidoDevolverEntregueJob>().EveryTenSeconds();
             });
         }
     }

@@ -84,3 +84,7 @@ C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Index.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Visualizar.cshtml.g.cs
 C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\PedidoSituacao\Default.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\CriarSenha.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Recuperar.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\CriarSenha.cshtml.g.cs
+C:\Users\ander\Desktop\Git\LojaVirtual\Novo\LojaVirtual\LojaVirtual\obj\Release\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Recuperar.cshtml.g.cs

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
@@ -11,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
     [Area("Cliente")]
-    [ClienteAutorizacao]
     public class PedidoController : Controller
     {
 
@@ -38,7 +36,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
             if (pedido.ClienteId != cliente.Id)
             {
-                return new ContentResult() { Content = "Acesso negado." };
+                return new StatusCodeResult(403);
             }
 
             return View(pedido);
